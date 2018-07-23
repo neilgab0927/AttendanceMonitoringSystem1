@@ -1,0 +1,132 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DBC.master.cs" Inherits="AttendanceMonitoringSystem.DBC" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 94px;
+        }
+        .auto-style2 {
+            height: 30px;
+        }
+        .auto-style3 {
+            height: 30px;
+            width: 53px;
+        }
+        .auto-style4 {
+            height: 30px;
+            width: 70px;
+        }
+        .auto-style6 {
+            height: 30px;
+            width: 126px;
+        }
+        .auto-style7 {
+            height: 30px;
+            width: 41px;
+        }
+        .auto-style9 {
+            width: 1309px;
+            height: 12px;
+        }
+        .auto-style10 {
+            width: 246px;
+            height: 12px;
+        }
+        .auto-style12 {
+            width: 100%;
+            height: 30px;
+        }
+        .auto-style13 {
+            width: 100%;
+            height: 65px;
+        }
+        .auto-style14 {
+            height: 6px;
+        }
+        .auto-style15 {
+            height: 30px;
+            width: 100px;
+        }
+        .auto-style16 {
+            height: 30px;
+            width: 106px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+			 <table style="background-color:blue;" class="auto-style13">
+                    <tr>
+                        <td style="background-color:Blue" class="auto-style1"></td>
+                        <td style="background-color:Blue" class="auto-style1">&nbsp;<img src="Pictures/DBCLogo.png" alt="DBClogo" 
+                    style="width: 86px; height: 76px;" /></td>
+                        <td style="background-color:Blue">
+                            <table>
+                                <tr>
+                                    <td style="background-color:Blue">
+                                        <table>
+                                            <tr>
+                                                <td class="auto-style9"></td>
+                                                  <td class="auto-style10"><asp:Label runat="server"  CssClass="header-display-section" ID="lblDate"></asp:Label></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color:Blue" class="auto-style14">
+                                        <h2>DON BOSCO COLLEGE -CANLUBANG</h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color:Blue">
+                                        <h3>Ad Maiora Natus</h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table class="auto-style12" style="background-color:yellow;">
+                    <tr>
+                        <td style="background-color:yellow" class="auto-style6"></td>
+                        <td style="background-color:yellow" class="auto-style3"></td>
+                        <td style="background-color:yellow" class="auto-style4">
+                            <label style="text-align:center">
+                     
+                            Registration&nbsp;&nbsp;&nbsp;  
+                            </label>
+                        </td>
+                        <td style="background-color:yellow" class="auto-style15">
+                            <label style="text-align:center">
+                            Class Record</label> </td>
+                        <td style="background-color:yellow" class="auto-style16">
+                            <label style="text-align:center">
+                            Daily Record</label> </td>
+                        <td style="background-color:yellow" class="auto-style2"></td>
+                        <td style="background-color:yellow" class="auto-style2"></td>
+                        <td style="background-color:yellow" class="auto-style2"></td>
+                        <td style="background-color:yellow" class="auto-style2"></td>
+                        <td style="background-color:yellow" class="auto-style2"></td>
+                        <td style="background-color:yellow" class="auto-style2"></td>
+                        <td style="background-color:yellow" class="auto-style7">
+                            <label style="text-align:center">
+                            History</label> </td>
+                        <td style="background-color:yellow" class="auto-style2"></td>
+                    </tr>
+                </table>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
