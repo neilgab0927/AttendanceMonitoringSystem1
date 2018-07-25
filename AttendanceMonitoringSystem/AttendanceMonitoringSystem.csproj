@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -69,14 +72,204 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ClassRecord.aspx" />
+    <Content Include="content\bootstrap-theme.css" />
+    <Content Include="content\bootstrap-theme.min.css" />
+    <Content Include="content\bootstrap.css" />
+    <Content Include="content\bootstrap.min.css" />
+    <Content Include="content\panel-gallery\gallery-item-01.png" />
+    <Content Include="content\panel-gallery\gallery-item-large-1.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-large-10.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-large-11.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-large-12.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-large-2.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-large-3.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-large-4.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-large-5.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-large-6.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-large-7.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-large-8.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-large-9.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-small-1.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-small-10.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-small-11.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-small-12.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-small-2.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-small-3.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-small-4.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-small-5.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-small-6.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-small-7.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-small-8.jpg" />
+    <Content Include="content\panel-gallery\gallery-item-small-9.jpg" />
     <Content Include="DailyRecord.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="layout\1140.css" />
+    <Content Include="layout\custom - Copy.js" />
+    <Content Include="layout\custom.js" />
+    <Content Include="layout\ie.css" />
+    <Content Include="layout\images\back-breadcrumbs.png" />
+    <Content Include="layout\images\back-chart-dashboard.png" />
+    <Content Include="layout\images\back-dropdown-pin.png" />
+    <Content Include="layout\images\back-gallery-overlay.png" />
+    <Content Include="layout\images\back-header-wrapper.png" />
+    <Content Include="layout\images\back-logo.png" />
+    <Content Include="layout\images\back-nav-active.png" />
+    <Content Include="layout\images\back-nav-sub-pin.png" />
+    <Content Include="layout\images\back-nav-sub.png" />
+    <Content Include="layout\images\back-nav-user-options.png" />
+    <Content Include="layout\images\back-navigation-arrow.png" />
+    <Content Include="layout\images\back-pagination.png" />
+    <Content Include="layout\images\back-panel-title.png" />
+    <Content Include="layout\images\back-pattern.png" />
+    <Content Include="layout\images\back-progress-bars.png" />
+    <Content Include="layout\images\back-table-sorter-asc.png" />
+    <Content Include="layout\images\back-table-sorter-desc.png" />
+    <Content Include="layout\images\back-table-sorter-header.png" />
+    <Content Include="layout\images\back-user-account.png" />
+    <Content Include="layout\images\brgy-logo.png" />
+    <Content Include="layout\images\Clearance-letter-head.png" />
+    <Content Include="layout\images\ebpls-fav.png" />
+    <Content Include="layout\images\ebpls-logo.png" />
+    <Content Include="layout\images\favicon.ico" />
+    <Content Include="layout\images\favicon_.ico" />
+    <Content Include="layout\images\icons\add .png" />
+    <Content Include="layout\images\icons\add.png" />
+    <Content Include="layout\images\icons\add_.png" />
+    <Content Include="layout\images\icons\case.png" />
+    <Content Include="layout\images\icons\delete.png" />
+    <Content Include="layout\images\icons\delete1.png" />
+    <Content Include="layout\images\icons\download.png" />
+    <Content Include="layout\images\icons\healthcare.png" />
+    <Content Include="layout\images\icons\icon-archive-white.png" />
+    <Content Include="layout\images\icons\icon-archive.png" />
+    <Content Include="layout\images\icons\icon-attach.png" />
+    <Content Include="layout\images\icons\icon-brush.png" />
+    <Content Include="layout\images\icons\icon-calc-white.png" />
+    <Content Include="layout\images\icons\icon-calc.png" />
+    <Content Include="layout\images\icons\icon-calendar-white.png" />
+    <Content Include="layout\images\icons\icon-calendar.png" />
+    <Content Include="layout\images\icons\icon-cancel-white.png" />
+    <Content Include="layout\images\icons\icon-cancel.png" />
+    <Content Include="layout\images\icons\icon-chat.png" />
+    <Content Include="layout\images\icons\icon-cloud.png" />
+    <Content Include="layout\images\icons\icon-dashboard-white.png" />
+    <Content Include="layout\images\icons\icon-dashboard.png" />
+    <Content Include="layout\images\icons\icon-delete.png" />
+    <Content Include="layout\images\icons\icon-docs.png" />
+    <Content Include="layout\images\icons\icon-download.png" />
+    <Content Include="layout\images\icons\icon-edit.png" />
+    <Content Include="layout\images\icons\icon-email.png" />
+    <Content Include="layout\images\icons\icon-fav.png" />
+    <Content Include="layout\images\icons\icon-folder.png" />
+    <Content Include="layout\images\icons\icon-fullscreen.png" />
+    <Content Include="layout\images\icons\icon-graph-white.png" />
+    <Content Include="layout\images\icons\icon-graph.png" />
+    <Content Include="layout\images\icons\icon-grid-white.png" />
+    <Content Include="layout\images\icons\icon-grid.png" />
+    <Content Include="layout\images\icons\icon-list-white.png" />
+    <Content Include="layout\images\icons\icon-list.png" />
+    <Content Include="layout\images\icons\icon-lock-white.png" />
+    <Content Include="layout\images\icons\icon-lock.png" />
+    <Content Include="layout\images\icons\icon-map.png" />
+    <Content Include="layout\images\icons\icon-menu-messages.png" />
+    <Content Include="layout\images\icons\icon-menu-profile.png" />
+    <Content Include="layout\images\icons\icon-menu-settings.png" />
+    <Content Include="layout\images\icons\icon-menu-tasks.png" />
+    <Content Include="layout\images\icons\icon-menu-users.png" />
+    <Content Include="layout\images\icons\icon-new.png" />
+    <Content Include="layout\images\icons\icon-picture-white.png" />
+    <Content Include="layout\images\icons\icon-picture.png" />
+    <Content Include="layout\images\icons\icon-print.png" />
+    <Content Include="layout\images\icons\icon-refresh.png" />
+    <Content Include="layout\images\icons\icon-reload.png" />
+    <Content Include="layout\images\icons\icon-settings.png" />
+    <Content Include="layout\images\icons\icon-shutdown.png" />
+    <Content Include="layout\images\icons\icon-star-white.png" />
+    <Content Include="layout\images\icons\icon-tag.png" />
+    <Content Include="layout\images\icons\icon-time.png" />
+    <Content Include="layout\images\icons\icon-unlock.png" />
+    <Content Include="layout\images\icons\icon-user.png" />
+    <Content Include="layout\images\icons\icon-users.png" />
+    <Content Include="layout\images\icons\icon-volume.png" />
+    <Content Include="layout\images\icons\order.png" />
+    <Content Include="layout\images\icons\person.png" />
+    <Content Include="layout\images\icons\print.png" />
+    <Content Include="layout\images\icons\recommend.png" />
+    <Content Include="layout\images\icons\update.png" />
+    <Content Include="layout\images\icons\update1.png" />
+    <Content Include="layout\images\icons\view.png" />
+    <Content Include="layout\images\LETTERHEAD LUPON.jpg" />
+    <Content Include="layout\images\Letterhead Report - Copy.jpg" />
+    <Content Include="layout\images\Letterhead Report.jpg" />
+    <Content Include="layout\images\personDefault.jpg" />
+    <Content Include="layout\images\Ugong %282%29.png" />
+    <Content Include="layout\images\ugong-police.png" />
+    <Content Include="layout\images\ugong-seal.jpg" />
+    <Content Include="layout\jquery-1.7.min.js" />
+    <Content Include="layout\jquery-v1.6-min.js" />
+    <Content Include="layout\pagination\images\bullet_arrow_down.png" />
+    <Content Include="layout\pagination\images\bullet_arrow_up.png" />
+    <Content Include="layout\pagination\images\eeGrad2.gif" />
+    <Content Include="layout\pagination\images\f0f2f5grad.gif" />
+    <Content Include="layout\pagination\jquery.js" />
+    <Content Include="layout\pagination\jTPS.css" />
+    <Content Include="layout\pagination\jTPS.js" />
+    <Content Include="layout\pagination\script.js" />
+    <Content Include="layout\scripts\css3-mediaqueries.js" />
+    <Content Include="layout\scripts\jquery.colorbox\colorbox.css" />
+    <Content Include="layout\scripts\jquery.colorbox\images\border.png" />
+    <Content Include="layout\scripts\jquery.colorbox\images\controls.png" />
+    <Content Include="layout\scripts\jquery.colorbox\images\ie6\borderBottomCenter.png" />
+    <Content Include="layout\scripts\jquery.colorbox\images\ie6\borderBottomLeft.png" />
+    <Content Include="layout\scripts\jquery.colorbox\images\ie6\borderBottomRight.png" />
+    <Content Include="layout\scripts\jquery.colorbox\images\ie6\borderMiddleLeft.png" />
+    <Content Include="layout\scripts\jquery.colorbox\images\ie6\borderMiddleRight.png" />
+    <Content Include="layout\scripts\jquery.colorbox\images\ie6\borderTopCenter.png" />
+    <Content Include="layout\scripts\jquery.colorbox\images\ie6\borderTopLeft.png" />
+    <Content Include="layout\scripts\jquery.colorbox\images\ie6\borderTopRight.png" />
+    <Content Include="layout\scripts\jquery.colorbox\images\loading.gif" />
+    <Content Include="layout\scripts\jquery.colorbox\images\loading_background.png" />
+    <Content Include="layout\scripts\jquery.colorbox\images\overlay.png" />
+    <Content Include="layout\scripts\jquery.colorbox\jquery.colorbox-min.js" />
+    <Content Include="layout\scripts\jquery.colorbox\jquery.colorbox.js" />
+    <Content Include="layout\scripts\jquery.flot\excanvas.js" />
+    <Content Include="layout\scripts\jquery.flot\excanvas.min.js" />
+    <Content Include="layout\scripts\jquery.flot\jquery.flot.js" />
+    <Content Include="layout\scripts\jquery.flot\jquery.flot.min.js" />
+    <Content Include="layout\scripts\jquery.flot\jquery.flot.pie.js" />
+    <Content Include="layout\scripts\jquery.flot\jquery.flot.pie.min.js" />
+    <Content Include="layout\scripts\jquery.fullcalendar\fullcalendar.css" />
+    <Content Include="layout\scripts\jquery.fullcalendar\fullcalendar.js" />
+    <Content Include="layout\scripts\jquery.fullcalendar\fullcalendar.min.js" />
+    <Content Include="layout\scripts\jquery.fullcalendar\fullcalendar.print.css" />
+    <Content Include="layout\scripts\jquery.fullcalendar\gcal.js" />
+    <Content Include="layout\scripts\jquery.morris\morris.js" />
+    <Content Include="layout\scripts\jquery.morris\morris.min.js" />
+    <Content Include="layout\scripts\jquery.raphael\raphael-min.js" />
+    <Content Include="layout\scripts\jquery.raphael\raphael.js" />
+    <Content Include="layout\scripts\jquery.snippet\jquery.snippet.css" />
+    <Content Include="layout\scripts\jquery.snippet\jquery.snippet.js" />
+    <Content Include="layout\scripts\jquery.snippet\jquery.snippet.min.js" />
+    <Content Include="layout\scripts\jquery.tablesorter\jquery.tablesorter.js" />
+    <Content Include="layout\scripts\jquery.tablesorter\jquery.tablesorter.min.js" />
+    <Content Include="layout\scripts\jquery.uniform\images\bg-input-focus.png" />
+    <Content Include="layout\scripts\jquery.uniform\images\bg-input.png" />
+    <Content Include="layout\scripts\jquery.uniform\images\sprite.png" />
+    <Content Include="layout\scripts\jquery.uniform\jquery.uniform.js" />
+    <Content Include="layout\scripts\jquery.uniform\jquery.uniform.min.js" />
+    <Content Include="layout\scripts\jquery.uniform\uniform.default.css" />
+    <Content Include="layout\scripts\list\list.min.js" />
+    <Content Include="layout\scripts\nicEdit\nicEdit.js" />
+    <Content Include="layout\scripts\nicEdit\nicEditorIcons.gif" />
+    <Content Include="layout\scripts\table.resizable\resizable.tables.js" />
+    <Content Include="layout\styles.css" />
     <Content Include="LogIn.aspx" />
     <Content Include="Main.aspx" />
     <Content Include="Pictures\DBCLogo.png" />
     <Content Include="Pictures\DBCRotonda.png" />
     <Content Include="Pictures\Log.png" />
     <Content Include="Registration.aspx" />
+    <Content Include="Student.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -96,6 +289,7 @@
     <Compile Include="DailyRecord.aspx.designer.cs">
       <DependentUpon>DailyRecord.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DataAccess.cs" />
     <Compile Include="DBC.Master.cs">
       <DependentUpon>DBC.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -106,6 +300,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper.cs" />
     <Compile Include="LogIn.aspx.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -120,6 +315,7 @@
     <Compile Include="Main.aspx.designer.cs">
       <DependentUpon>Main.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\StudentModel.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registration.aspx.cs">
@@ -129,9 +325,20 @@
     <Compile Include="Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Student.aspx.cs">
+      <DependentUpon>Student.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student.aspx.designer.cs">
+      <DependentUpon>Student.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="DBC.Master" />
+    <Content Include="content\bootstrap-theme.css.map" />
+    <Content Include="content\bootstrap-theme.min.css.map" />
+    <Content Include="content\bootstrap.css.map" />
+    <Content Include="content\bootstrap.min.css.map" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

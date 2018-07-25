@@ -14,6 +14,7 @@ namespace AttendanceMonitoringSystem
 {
     public partial class LogIn : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
             /// LblUser.Text = Session[""].ToString();
@@ -24,48 +25,77 @@ namespace AttendanceMonitoringSystem
         {
             try
             {
+                DataAccess db = new DataAccess();
 
+                var user = db.ValidateLogIn(TxtUser.Text, TxtPass.Text);
 
-                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["AMSconnect"].ToString());
-
-                string uid = TxtUser.Text;
-                string pass = TxtPass.Text;
-
-                string qry = "select * from tb_users where Username='" + uid + "' and Password='" + pass + "'";
-                //string qry = "select * from login where Username='" + uid + "' and Password='" + pass + "'";
-                SqlCommand cmd = new SqlCommand(qry, con);
-
-                con.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-             
-                if (reader.HasRows)
+                if (user != null)
                 {
-                    while (reader.Read())
+                    Users _user = new Users
                     {
-                        Users user = new Users
-                        {
-                            IDNumber = Convert.ToInt32(reader["id"]),
-                            Username = reader["username"].ToString(),
-                            Password = reader["password"].ToString()
-                        };
-                        Cache["user"] = user;
-                    }
+                        Id = user.Id,
+                        Username = user.Username,
+                        Password = user.Password
+                    };
+
+                    Cache["user"] = _user;
+
                     Response.Redirect("Main.aspx");
                 }
                 else
                 {
                     LblComment.Text = "UserId & Password Is not correct Try again..!!";
-
                 }
-                con.Close();
             }
             catch (Exception ex)
             {
 
-                Response.Write(ex.Message);
-                Session.RemoveAll();
-                
             }
+
+
+
+            //try
+            //{
+            //    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["AMSconnect"].ToString());
+
+            //    string uid = TxtUser.Text;
+            //    string pass = TxtPass.Text;
+
+            //    string qry = "select * from tb_users where Username='" + uid + "' and Password='" + pass + "'";
+            //    //string qry = "select * from login where Username='" + uid + "' and Password='" + pass + "'";
+            //    SqlCommand cmd = new SqlCommand(qry, con);
+
+            //    con.Open();
+            //    SqlDataReader reader = cmd.ExecuteReader();
+
+            //    if (reader.HasRows)
+            //    {
+            //        while (reader.Read())
+            //        {
+            //            Users user = new Users
+            //            {
+            //                IDNumber = Convert.ToInt32(reader["id"]),
+            //                Username = reader["username"].ToString(),
+            //                Password = reader["password"].ToString()
+            //            };
+            //            Cache["user"] = user;
+            //        }
+            //        Response.Redirect("Main.aspx");
+            //    }
+            //    else
+            //    {
+            //        LblComment.Text = "UserId & Password Is not correct Try again..!!";
+
+            //    }
+            //    con.Close();
+            //}
+            //catch (Exception ex)
+            //{
+
+            //    Response.Write(ex.Message);
+            //    Session.RemoveAll();
+
+            //}
         }
 
     }

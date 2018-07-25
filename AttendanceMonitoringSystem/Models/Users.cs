@@ -7,8 +7,10 @@ namespace AttendanceMonitoringSystem.Models
 {
     public class Users
     {
-        public int IDNumber { get; set; }
+        public int Id { get; set; }
+
         public string Username { get; set; }
+
         public string Password { get; set; }
     }
 }

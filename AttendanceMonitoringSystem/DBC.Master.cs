@@ -13,5 +13,16 @@ namespace AttendanceMonitoringSystem
         {
             lblDate.Text = System.DateTime.Now.ToString("dd/MM/yyyy");
         }
+
+        protected void lnkRegistration_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Registration.aspx");
+        }
+
+        protected void lnkStudent_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Student.aspx");
+
+        }
     }
 }
