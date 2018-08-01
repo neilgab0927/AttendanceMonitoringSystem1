@@ -13,12 +13,12 @@ namespace AttendanceMonitoringSystem {
     public partial class ClassRecord {
         
         /// <summary>
-        /// gvClassRecord control.
+        /// gvHistory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvClassRecord;
+        protected global::System.Web.UI.WebControls.GridView gvHistory;
     }
 }

@@ -13,76 +13,139 @@ namespace AttendanceMonitoringSystem {
     public partial class Registration {
         
         /// <summary>
-        /// TxtName control.
+        /// ScriptManager1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtName;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// LblStudentNo control.
+        /// lblIdAddEdit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblStudentNo;
+        protected global::System.Web.UI.WebControls.Label lblIdAddEdit;
         
         /// <summary>
-        /// TxtStudentNo control.
+        /// lblStudentNumberAddEdit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtStudentNo;
+        protected global::System.Web.UI.WebControls.Label lblStudentNumberAddEdit;
         
         /// <summary>
-        /// TxtProgram control.
+        /// txtStudentNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtProgram;
+        protected global::System.Web.UI.WebControls.TextBox txtStudentNumber;
         
         /// <summary>
-        /// LblYear control.
+        /// lblFirtsNameAddEdit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblYear;
+        protected global::System.Web.UI.WebControls.Label lblFirtsNameAddEdit;
         
         /// <summary>
-        /// TxtYear control.
+        /// txtStudentFirstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtYear;
+        protected global::System.Web.UI.WebControls.TextBox txtStudentFirstName;
         
         /// <summary>
-        /// lblPosition control.
+        /// lblMiddleNameAddEdit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPosition;
+        protected global::System.Web.UI.WebControls.Label lblMiddleNameAddEdit;
         
         /// <summary>
-        /// ddlPosition control.
+        /// txtStudentMiddleName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPosition;
+        protected global::System.Web.UI.WebControls.TextBox txtStudentMiddleName;
+        
+        /// <summary>
+        /// lblLastNameAddEdit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLastNameAddEdit;
+        
+        /// <summary>
+        /// txtStudentLastName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtStudentLastName;
+        
+        /// <summary>
+        /// lblProgramAddEdit0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblProgramAddEdit0;
+        
+        /// <summary>
+        /// txtProgram0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtProgram0;
+        
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
+        /// txtAdmissionYear0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAdmissionYear0;
+        
+        /// <summary>
+        /// CalendatExtender6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CalendarExtender CalendatExtender6;
         
         /// <summary>
         /// LblNote control.
@@ -94,12 +157,39 @@ namespace AttendanceMonitoringSystem {
         protected global::System.Web.UI.WebControls.Label LblNote;
         
         /// <summary>
-        /// btnReg control.
+        /// btnRegister control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReg;
+        protected global::System.Web.UI.WebControls.Button btnRegister;
+        
+        /// <summary>
+        /// btnRegisterNew control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRegisterNew;
+        
+        /// <summary>
+        /// pnlStudent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlStudent;
+        
+        /// <summary>
+        /// rptrStudent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptrStudent;
     }
 }

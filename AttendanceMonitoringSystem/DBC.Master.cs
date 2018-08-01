@@ -22,7 +22,16 @@ namespace AttendanceMonitoringSystem
         protected void lnkStudent_OnClick(object sender, EventArgs e)
         {
             Response.Redirect("Student.aspx");
+        }
 
+        protected void lnkDailyRecord_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("DailyRecord.aspx");
+        }
+
+        protected void lnkHistory_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("History");
         }
     }
 }

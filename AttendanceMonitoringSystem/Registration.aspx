@@ -1,15 +1,18 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DBC.Master" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="AttendanceMonitoringSystem.Registration" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DBC.Master" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="AttendanceMonitoringSystem.Registration" MaintainScrollPositionOnPostback="true" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
     <style type="text/css">
-        .auto-style10 {
-            width: 149px;
-            height: 67px;
+        .RegsForm {
+            width: 100%;
         }
 
-        .auto-style12 {
-            width: 482px;
+        .auto-style10 {
+            width: 149px;
             height: 67px;
         }
 
@@ -19,188 +22,191 @@
             margin-top: 0px;
         }
 
-        .auto-style16 {
-            height: 67px;
-            width: 332px;
+        .auto-style41 {
+            width: 1002px;
+            height: 29px;
         }
 
-        .auto-style17 {
-            height: 15px;
+        .auto-style42 {
+            width: 379px;
         }
 
-        .auto-style23 {
-            width: 100%;
-            height: 363px;
+        .auto-style43 {
+            width: 80px;
         }
 
-        .auto-style30 {
-            width: 53%;
-            height: 294px;
+        .auto-style44 {
+            width: 139px;
         }
 
-        .auto-style31 {
-            width: 121px;
-            height: 294px;
+        .auto-style45 {
+            width: 111px;
         }
-
-        .auto-style32 {
-            width: 65px;
-            height: 294px;
+        .auto-style46 {
+            width: 111px;
+            height: 59px;
         }
-
-        .auto-style35 {
-            width: 543px;
-            height: 136px;
-        }
-
-        .auto-style36 {
-            width: 118px;
-        }
-
-        .auto-style37 {
-            width: 543px;
-            height: 153px;
+        .auto-style47 {
+            width: 139px;
+            height: 59px;
         }
     </style>
 
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
 
-
-    <body style="text-align: center"></body>
-
-    
-
-
-
-
-
-
-
-
-    <table class="auto-style23" style="background-image: url('Pictures/BW.PNG');">
+    <table style="width: 100%">
         <tr>
-            <td class="auto-style17" colspan="3">
+            <td>
+                <h2 class="auto-style41">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      REGISTRATION FORM </h2>
+            </td>
+        </tr>
+    </table>
+
+    <table style="width: 100%" class="RegsForm">
+        <tr>
+            <td class="auto-style43"></td>
+            <td class="auto-style42">
+                <table>
+                    <tr>
+                        <td class="auto-style46">
+                            <asp:Label runat="server" ID="lblIdAddEdit" Visible="False" />
+                            <asp:Label runat="server" ID="lblStudentNumberAddEdit">Student Number:</asp:Label>
+                        </td>
+
+                        <td class="auto-style47">
+                            <asp:TextBox runat="server" ID="txtStudentNumber" Width="220px" /></td>
+                    </tr>
+
+                    <tr>
+                        <td class="auto-style45">
+                            <asp:Label runat="server" ID="lblFirtsNameAddEdit">First Name:</asp:Label>
+
+                        </td>
+                        <td class="auto-style44">
+                            <asp:TextBox runat="server" ID="txtStudentFirstName" Width="222px" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="auto-style45">
+                            <asp:Label runat="server" ID="lblMiddleNameAddEdit">Middle Name:</asp:Label></td>
+                        <td class="auto-style44">
+                            <asp:TextBox runat="server" ID="txtStudentMiddleName" Width="221px" /></td>
+                    </tr>
+
+                    <tr>
+                        <td class="auto-style45">
+                            <asp:Label runat="server" ID="lblLastNameAddEdit">Last Name:</asp:Label></td>
+                        <td class="auto-style44">
+                            <asp:TextBox runat="server" ID="txtStudentLastName" Width="221px" /></td>
+                    </tr>
+
+                    <tr>
+                        <td class="auto-style45">
+                            <asp:Label ID="lblProgramAddEdit0" runat="server">Program:</asp:Label></td>
+                        <td class="auto-style44">
+                            <asp:TextBox runat="server" ID="txtProgram0" Width="221px" /></td>
+                    </tr>
+
+                    <tr>
+                        <td class="auto-style45">
+                            <asp:Label ID="Label1" runat="server">Admission Year:</asp:Label></td>
+                        <td class="auto-style44">
+                            <asp:TextBox runat="server" ID="txtAdmissionYear0" Width="221px" />
+                            <!-- TargetControlID = yung tatargetin niyang textbox -->
+                        <ajaxToolkit:CalendarExtender ID="CalendatExtender6" runat="server"
+                            TargetControlID="txtAdmissionYear0"
+                            Format="MMM dd, yyyy"
+                            PopupPosition="BottomRight" PopupButtonID="Image1" />
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td class="auto-style45">
+                            <asp:Label ID="LblNote" runat="server" BorderStyle="None" />&nbsp;</td>
+                        <td class="auto-style44"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="auto-style45"></td>
+                        <td class="auto-style44">
+                            <asp:Button runat="server" ID="btnRegister" Text="Register" OnClick="btnRegister_OnClick" Width="89px" /></td>
+                        <asp:Button runat="server" ID="btnRegisterNew" Text="New" OnClick="btnRegisterNew_OnClick" Width="89px" />
+            </td>
+        </tr>
+
+    </table>
+    </td>
+
+            <td>
                 <table>
                     <tr>
                         <td>
-                            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; REGISTRATION FORM</h3>
+                            <asp:Panel runat="server" ID="pnlStudent" BorderStyle="solid" BorderWidth="3px">
+                                <table class="sortable jTPS" style="text-align: center; margin: 20px">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Student Number</th>
+                                        <th>Last Name</th>
+                                        <th>First Name</th>
+                                        <th>Middle Name</th>
+                                        <th>Program</th>
+                                        <th>Year</th>
+                                    </tr>
+                                    <asp:Repeater runat="server" ID="rptrStudent" OnItemCommand="rptrStudent_OnItemCommand">
+                                        <ItemTemplate>
+                                            <tr>
+
+                                                <td>
+                                                    <asp:Label ID="lblId" runat="server" Text='<%#Bind("Id") %>'></asp:Label>
+                                                </td>
+                                                <td>
+                                                    <asp:Label ID="lblStudentId" runat="server" Text='<%#Bind("StudentId") %>'></asp:Label>
+                                                </td>
+                                                <td>
+                                                    <asp:Label ID="lblStudentLastName" runat="server" Text='<%#Bind("LastName") %>'></asp:Label>
+                                                </td>
+                                                <td>
+                                                    <asp:Label ID="lblStudentFirstName" runat="server" Text='<%#Bind("FirstName") %>'></asp:Label>
+                                                </td>
+                                                <td>
+                                                    <asp:Label ID="lblStudentMiddleName" runat="server" Text='<%#Bind("MiddleName") %>'></asp:Label>
+                                                </td>
+                                                <td>
+                                                    <asp:Label ID="lblStudentProgram" runat="server" Text='<%#Bind("Program") %>'></asp:Label>
+                                                </td>
+                                                <td>
+                                                    <asp:Label ID="lblStudentYear" runat="server" Text='<%#Bind("Year") %>'></asp:Label>
+                                                    <asp:Label ID="lblStudentAdmissionYear" runat="server" Text='<%#Bind("AdmissionYear") %>' Visible="false"></asp:Label>
+                                                </td>
+                                                <td>
+                                                    <asp:LinkButton ID="lnkEdit" runat="server" CommandName="Edit">
+                                <img width="22" height="22" src="layout/images/icons/update.png" style="margin-left: 10px; margin-right: 10px;" alt="Update" title="Update"/>
+                                                    </asp:LinkButton>
+
+                                                    <asp:LinkButton ID="lnkRemoveUser" runat="server" CommandName="Delete" OnClientClick="return confirm('Are you sure to delete the selected records?')">
+                                <img width="22" height="22" src="layout/images/icons/delete.png" style="margin-left: 10px;" alt="Remove" title="Remove"/>
+                                                    </asp:LinkButton>
+                                                </td>
+                                            </tr>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                </table>
+                            </asp:Panel>
                         </td>
                     </tr>
                 </table>
             </td>
-        </tr>
 
-        <tr>
-            <td class="auto-style32"></td>
-            <td class="auto-style30">
-                <table>
-                    <tr>
-                        <td class="auto-style37">
-                            <table class="auto-style29">
-                                <tr>
-                                    <td class="auto-style36">
-                                        <asp:Label runat="server" Text="Student Name"></asp:Label>
-                                    </td>
-                                    <td>
-                                        <table class="auto-style26">
-                                            <tr>
-                                                <td class="style26">
-                                                    <asp:TextBox ID="TxtName" runat="server" Width="226px" OnTextChanged="TxtLname_TextChanged"></asp:TextBox>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-
-                                <tr>
-                                    <td class="auto-style36">
-                                        <asp:Label ID="LblStudentNo" runat="server" Text="Student Number"></asp:Label>
-                                    </td>
-                                    <td class="style17">
-                                        <asp:TextBox ID="TxtStudentNo" runat="server" Width="226px"></asp:TextBox>
-                                    </td>
-                                    <td class="style13"></td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style36">Program</td>
-                                    <td class="style17">
-                                        <asp:TextBox ID="TxtProgram" runat="server" Width="226px"></asp:TextBox>
-                                    </td>
-                                    <td class="style13">
-                                        <br />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="auto-style36">
-                                        <asp:Label ID="LblYear" runat="server" Text="Year"></asp:Label>
-                                    </td>
-                                    <td class="style17">
-                                        <asp:TextBox ID="TxtYear" runat="server" Width="226px"></asp:TextBox>
-                                    </td>
-                                    <td class="style13">
-                                        <br />
-                                    </td>
-
-                                    <td class="style13">
-                                        <br />
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td class="auto-style36">
-                                        <asp:Label ID="lblPosition" runat="server" Text="Position"></asp:Label>
-                                    </td>
-                                    <td class="style17">
-                                        <asp:DropDownList ID="ddlPosition" runat="server" Height="16px" Width="237px"></asp:DropDownList>
-                                    </td>
-                                    <td class="style13">
-                                        <br />
-                                    </td>
-
-                                    <td class="style13">
-                                        <br />
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td class="auto-style36">
-                                        <asp:Label ID="LblNote" runat="server" BorderStyle="None" />
-                                        &nbsp;</td>
-                                    <td class="style17">
-
-                                        <table class="auto-style20">
-                                            <tr>
-                                                <td class="auto-style22"></td>
-                                                <td class="auto-style21">
-                                                    <asp:Button ID="btnReg" runat="server" OnClick="Button1_Click" Text="Register" Width="105px" Height="26px"
-                                                        Style="margin-left: 45px" />
-                                                </td>
-                                                <td class="auto-style19"></td>
-                                            </tr>
-                                        </table>
-
-                                    </td>
-                                    <td class="style13">
-                                        <br />
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="auto-style35"></td>
-                    </tr>
-                </table>
-            </td>
-            <td class="auto-style31">
-                <br />
-            </td>
-
-        </tr>
+    </tr>
     </table>
+
+
 
 </asp:Content>

@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DBC.Master" AutoEventWireup="true" CodeBehind="ClassRecord.aspx.cs" Inherits="AttendanceMonitoringSystem.ClassRecord" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DBC.Master" AutoEventWireup="true" CodeBehind="History.aspx.cs" Inherits="AttendanceMonitoringSystem.ClassRecord" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style8 {
@@ -30,6 +31,39 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <table class="auto-style12">
+        <tr>
+            <td class="auto-style13">     
+                <table class="auto-style11">
+                    <tr>
+                        <td>
+                            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HISTORY</h3>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <table class="auto-style14">
+                    <tr>
+                        <td class="auto-style8"></td>
+                        <td class="auto-style9"> 
+                            <asp:GridView ID="gvHistory" runat="server" CssClass="gv" Width="700px">
+                            </asp:GridView>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>    
+</asp:Content>
+
+<%--<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="auto-style12">
         <tr>
             <td class="auto-style13">     
@@ -59,5 +93,5 @@
             </td>
         </tr>
         </table>    
-</asp:Content>
+</asp:Content>--%>
 

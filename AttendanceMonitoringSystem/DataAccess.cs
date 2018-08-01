@@ -23,34 +23,78 @@ namespace AttendanceMonitoringSystem
             }
         }
 
+        #region Student
+
+
+        // bind to repeater
         public List<StudentModel> GetListOfStudents()
         {
             using (IDbConnection connection = new SqlConnection(Helper.CnnVal("AMSconnect")))
             {
-                var output = connection.Query<StudentModel>("spStudentGetList").ToList();
+                var output = connection.Query<StudentModel>("spStudent_GetList").ToList();
                 return output;
             }
         }
 
-        public void InsertUpdateStudent(int _id, string _studentNumber, string _firstName, string _middleName, string _lastName)
+        public void InsertUpdateStudent(int _id, string _studentNumber, string _firstName, string _middleName, string _lastName, bool _isActive, string _program, DateTime _admissionYear)
         {
             using (IDbConnection connection = new SqlConnection(Helper.CnnVal("AMSconnect")))
             {
-                List<StudentModel> Students = new List<StudentModel>
+                List<StudentModel> Students = new List<StudentModel> // create new List<StudentModel>
                 {
-                    new StudentModel()
+                    new StudentModel() // instantiate new StudentModel
                     {
+                        // Id = yung propert ni StudentModel >> _id = parameter na pinasa sa method na to (InsertUpdateStudent)
                         Id = _id,
                         StudentId = _studentNumber,
                         FirstName = _firstName,
                         MiddleName = _middleName,
-                        LastName = _lastName
+                        LastName = _lastName,
+                        IsActive = _isActive,
+                        Program = _program,
+                        AdmissionYear = _admissionYear
                     }
                 };
 
-                connection.Execute("spInsertUpdateStudent @Id, @StudentId, @FirstName, @MiddleName, @LastName", Students);
+                connection.Execute("spStudent_InsertUpdate @Id, @StudentId, @FirstName, @MiddleName, @LastName, @isActive, @program, @admissionYear", Students);
             }
         }
+
+        public StudentModel GetStudentById(int id)
+        {
+            using (IDbConnection connection = new SqlConnection(Helper.CnnVal("AMSconnect")))
+            {
+                var output = connection.QueryFirstOrDefault<StudentModel>("spStudent_GetById @Id", new { Id = id });
+
+                return output;
+            }
+        }
+
+        public void DeleteStudentById(int id)
+        {
+            using (IDbConnection connection = new SqlConnection(Helper.CnnVal("AMSconnect")))
+            {
+                connection.Execute("spStudent_DeleteById @Id", new { Id = id });
+
+            }
+        }
+
+        #endregion
+
+
+        #region Daily Record
+
+        // Bind List to Repeater
+        public List<DailyRecordModel> GetDailyRecord()
+        {
+            using (IDbConnection connection = new SqlConnection(Helper.CnnVal("AMSconnect")))
+            {
+                var output = connection.Query<DailyRecordModel>($"spDailyRecord_GetList").ToList();
+                return output;
+            }
+        }
+
+        #endregion
 
 
         //public List<Person> GetPeople(string lastName)

@@ -13,10 +13,5 @@ namespace AttendanceMonitoringSystem
         {
 
         }
-
-        protected void gvTestPlanDetails_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

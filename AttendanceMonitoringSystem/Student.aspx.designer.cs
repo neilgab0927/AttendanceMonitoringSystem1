@@ -13,13 +13,22 @@ namespace AttendanceMonitoringSystem {
     public partial class Student {
         
         /// <summary>
-        /// pnlNewStudent control.
+        /// btnNewStudent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlNewStudent;
+        protected global::System.Web.UI.WebControls.Button btnNewStudent;
+        
+        /// <summary>
+        /// pnlStudentForm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlStudentForm;
         
         /// <summary>
         /// lblIdAddEdit control.
@@ -101,15 +110,6 @@ namespace AttendanceMonitoringSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtStudentLastName;
-        
-        /// <summary>
-        /// btnNewStudent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNewStudent;
         
         /// <summary>
         /// btnSubmit control.

@@ -10,9 +10,7 @@ namespace AttendanceMonitoringSystem
 {
     public partial class Student : System.Web.UI.Page
     {
-
         DataAccess db = new DataAccess();
-
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,11 +23,13 @@ namespace AttendanceMonitoringSystem
         {
             if (ValidateNewStudentSubmit())
             {
-                db.InsertUpdateStudent(Convert.ToInt32(lblIdAddEdit.Text), txtStudentNumber.Text, txtStudentFirstName.Text, txtStudentMiddleName.Text, txtStudentLastName.Text);
+                //db.InsertUpdateStudent(Convert.ToInt32(lblIdAddEdit.Text), txtStudentNumber.Text, txtStudentFirstName.Text, 
+                //    txtStudentMiddleName.Text, txtStudentLastName.Text, true);
 
                 btnNewStudent_OnClick(sender, e);
                 isStudentFieldsEnabled(false);
                 LoadStudentList();
+                ClearPanels();
             }
             else
             {
@@ -39,8 +39,11 @@ namespace AttendanceMonitoringSystem
 
         protected void btnNewStudent_OnClick(object sender, EventArgs e)
         {
-            ClearNewStudentFields();
+            lblIdAddEdit.Text = "0";
+            pnlStudentForm.Visible = true;
             btnSubmit.Enabled = true;
+
+            ClearNewStudentFields();
             isStudentFieldsEnabled(true);
 
             lblStudentNumberAddEdit.ForeColor = System.Drawing.Color.Black;
@@ -51,7 +54,31 @@ namespace AttendanceMonitoringSystem
 
         protected void rptrStudent_OnItemCommand(object source, RepeaterCommandEventArgs e)
         {
-            throw new NotImplementedException();
+            Label lblId = (Label)e.Item.FindControl("lblId");
+            Label lblStudentId = (Label)e.Item.FindControl("lblStudentId");
+            Label lblStudentLastName = (Label)e.Item.FindControl("lblStudentLastName");
+            Label lblStudentFirstName = (Label)e.Item.FindControl("lblStudentFirstName");
+            Label lblStudentMiddleName = (Label)e.Item.FindControl("lblStudentMiddleName");
+
+            if (e.CommandName == "Edit")
+            {
+                pnlStudentForm.Visible = true;
+                isStudentFieldsEnabled(true);
+
+                lblIdAddEdit.Text = lblId.Text;
+                txtStudentNumber.Text = lblStudentId.Text;
+                txtStudentFirstName.Text = lblStudentLastName.Text;
+                txtStudentFirstName.Text = lblStudentLastName.Text;
+                txtStudentMiddleName.Text = lblStudentFirstName.Text;
+                txtStudentLastName.Text = lblStudentMiddleName.Text;
+            }
+
+            if (e.CommandName == "Delete")
+            {
+                db.DeleteStudentById(Convert.ToInt32(lblId.Text));
+                LoadStudentList();
+            }
+
         }
 
         #endregion
@@ -124,5 +151,9 @@ namespace AttendanceMonitoringSystem
 
         #endregion
 
+        private void ClearPanels()
+        {
+            pnlStudentForm.Visible = false;
+        }
     }
 }

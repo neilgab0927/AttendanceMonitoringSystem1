@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.18.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
     </Reference>
@@ -71,7 +74,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ClassRecord.aspx" />
+    <Content Include="History.aspx" />
     <Content Include="content\bootstrap-theme.css" />
     <Content Include="content\bootstrap-theme.min.css" />
     <Content Include="content\bootstrap.css" />
@@ -265,6 +268,25 @@
     <Content Include="layout\styles.css" />
     <Content Include="LogIn.aspx" />
     <Content Include="Main.aspx" />
+    <Content Include="packages\AjaxControlToolkit.17.1.1.0\lib\net40\AjaxControlToolkit.dll" />
+    <Content Include="packages\AjaxControlToolkit.17.1.1.0\readme.txt" />
+    <Content Include="packages\bootstrap.3.3.7\content\Content\bootstrap-theme.css" />
+    <Content Include="packages\bootstrap.3.3.7\content\Content\bootstrap-theme.min.css" />
+    <Content Include="packages\bootstrap.3.3.7\content\Content\bootstrap.css" />
+    <Content Include="packages\bootstrap.3.3.7\content\Content\bootstrap.min.css" />
+    <Content Include="packages\bootstrap.3.3.7\content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="packages\bootstrap.3.3.7\content\Scripts\bootstrap.js" />
+    <Content Include="packages\bootstrap.3.3.7\content\Scripts\bootstrap.min.js" />
+    <Content Include="packages\Dapper.1.50.5\lib\net451\Dapper.dll" />
+    <Content Include="packages\Dapper.1.50.5\lib\net451\Dapper.xml" />
+    <Content Include="packages\Dapper.1.50.5\lib\netstandard1.3\Dapper.dll" />
+    <Content Include="packages\Dapper.1.50.5\lib\netstandard1.3\Dapper.xml" />
+    <Content Include="packages\Dapper.1.50.5\lib\netstandard2.0\Dapper.dll" />
+    <Content Include="packages\Dapper.1.50.5\lib\netstandard2.0\Dapper.xml" />
+    <None Include="packages\jQuery.1.9.1\Content\Scripts\jquery-1.9.1-vsdoc.js" />
+    <Content Include="packages\jQuery.1.9.1\Content\Scripts\jquery-1.9.1.js" />
+    <Content Include="packages\jQuery.1.9.1\Content\Scripts\jquery-1.9.1.min.js" />
+    <None Include="packages\jQuery.1.9.1\Tools\jquery-1.9.1.intellisense.js" />
     <Content Include="Pictures\DBCLogo.png" />
     <Content Include="Pictures\DBCRotonda.png" />
     <Content Include="Pictures\Log.png" />
@@ -275,12 +297,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassRecord.aspx.cs">
-      <DependentUpon>ClassRecord.aspx</DependentUpon>
+    <Compile Include="History.aspx.cs">
+      <DependentUpon>History.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ClassRecord.aspx.designer.cs">
-      <DependentUpon>ClassRecord.aspx</DependentUpon>
+    <Compile Include="History.aspx.designer.cs">
+      <DependentUpon>History.aspx</DependentUpon>
     </Compile>
     <Compile Include="DailyRecord.aspx.cs">
       <DependentUpon>DailyRecord.aspx</DependentUpon>
@@ -315,6 +337,7 @@
     <Compile Include="Main.aspx.designer.cs">
       <DependentUpon>Main.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\DailyRecordModel.cs" />
     <Compile Include="Models\StudentModel.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -340,6 +363,23 @@
     <Content Include="content\bootstrap.css.map" />
     <Content Include="content\bootstrap.min.css.map" />
     <None Include="packages.config" />
+    <Content Include="packages\AjaxControlToolkit.17.1.1.0\AjaxControlToolkit.17.1.1.0.nupkg" />
+    <Content Include="packages\AjaxControlToolkit.17.1.1.0\Content\Web.config.transform" />
+    <Content Include="packages\bootstrap.3.3.7\bootstrap.3.3.7.nupkg" />
+    <Content Include="packages\bootstrap.3.3.7\content\Content\bootstrap-theme.css.map" />
+    <Content Include="packages\bootstrap.3.3.7\content\Content\bootstrap-theme.min.css.map" />
+    <Content Include="packages\bootstrap.3.3.7\content\Content\bootstrap.css.map" />
+    <Content Include="packages\bootstrap.3.3.7\content\Content\bootstrap.min.css.map" />
+    <Content Include="packages\bootstrap.3.3.7\content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages\bootstrap.3.3.7\content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="packages\bootstrap.3.3.7\content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="packages\bootstrap.3.3.7\content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="packages\Dapper.1.50.5\Dapper.1.50.5.nupkg" />
+    <Content Include="packages\jQuery.1.9.1\Content\Scripts\jquery-1.9.1.min.map" />
+    <Content Include="packages\jQuery.1.9.1\jQuery.1.9.1.nupkg" />
+    <Content Include="packages\jQuery.1.9.1\Tools\common.ps1" />
+    <Content Include="packages\jQuery.1.9.1\Tools\install.ps1" />
+    <Content Include="packages\jQuery.1.9.1\Tools\uninstall.ps1" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -9,31 +9,7 @@
     </asp:ContentPlaceHolder>
     <style type="text/css">
         .auto-style1 {
-            width: 94px;
-        }
-
-        .auto-style2 {
-            height: 30px;
-        }
-
-        .auto-style3 {
-            height: 30px;
-            width: 53px;
-        }
-
-        .auto-style4 {
-            height: 30px;
-            width: 70px;
-        }
-
-        .auto-style6 {
-            height: 30px;
-            width: 126px;
-        }
-
-        .auto-style7 {
-            height: 30px;
-            width: 41px;
+            width: 97px;
         }
 
         .auto-style9 {
@@ -46,42 +22,63 @@
             height: 12px;
         }
 
-        .auto-style12 {
-            width: 100%;
-            height: 30px;
-        }
-
-        .auto-style13 {
-            width: 100%;
-            height: 65px;
-        }
-
         .auto-style14 {
             height: 6px;
         }
 
         .auto-style15 {
-            height: 30px;
-            width: 100px;
+            width: 370px;
+        }
+        .auto-style22 {
+            width: 1424px;
+        }
+        .auto-style24 {
+            width: 129px;
+        }
+        .auto-style25 {
+            width: 94px;
+        }
+        .auto-style26 {
+            width: 360px;
+        }
+        .auto-style27 {
+            width: 375px;
+        }
+        .auto-style28 {
+            width: 356px;
+        }
+        .auto-style29 {
+            width: 135px;
+            height: 106px;
+        }
+        .auto-style30 {
+            width: 100%;
+            height: 18px;
+        }
+        .auto-style31 {
+            width: 100%;
+            height: 109px;
+        }
+        .auto-style32 {
+            width: 100%;
+            height: 84px;
         }
 
-        .auto-style16 {
-            height: 30px;
-            width: 106px;
-        }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <table style="background-color: blue;" class="auto-style13">
+            <table style="background-color:blue; " class="auto-style32">
                 <tr>
-                    <td style="background-color: Blue" class="auto-style1"></td>
-                    <td style="background-color: Blue" class="auto-style1">&nbsp;<img src="Pictures/DBCLogo.png" alt="DBClogo"
-                        style="width: 86px; height: 76px;" /></td>
-                    <td style="background-color: Blue">
-                        <table>
-                            <tr>
+                    <td>
+                        <table style="background-color:blue;" class="auto-style31">
+                <tr>
+                     <td style="background-color: Blue" class="auto-style1">&nbsp; <img src="Pictures/DBCLogo.png" alt="DBClogo" class="auto-style29" /></td>
+
+                   <td>
+                       <table>
+                           <tr>
                                 <td style="background-color: Blue">
                                     <table>
                                         <tr>
@@ -94,55 +91,53 @@
                             </tr>
                             <tr>
                                 <td style="background-color: Blue" class="auto-style14">
-                                    <h2>DON BOSCO COLLEGE -CANLUBANG</h2>
+                                    <h1>DON BOSCO COLLEGE -CANLUBANG</h1>
+                                     <h2>Ad Maiora Natus</h2>
                                 </td>
                             </tr>
-                            <tr>
-                                <td style="background-color: Blue">
-                                    <h3>Ad Maiora Natus</h3>
-                                </td>
-                            </tr>
-                            <tr>
-                            </tr>
-                        </table>
+                        
+                            </table>
+                    </td>
+                           </tr>
+
+                       </table>
                     </td>
                 </tr>
-            </table>
-            <table class="auto-style12" style="background-color: yellow;">
+
                 <tr>
-                    <td style="background-color: yellow" class="auto-style6"></td>
-                    <td style="background-color: yellow" class="auto-style3">
-                        <asp:LinkButton runat="server" ID="lnkStudent" Text="Student" OnClick="lnkStudent_OnClick"/>
+                    <td>
+                         <table class="auto-style30" style="background-color: yellow; ">
+                <tr>
+                    <td style="background-color: yellow" class="auto-style28"></td>
 
-                    </td>
-
-                    <td style="background-color: yellow" class="auto-style4">
+                    <td style="background-color: yellow" class="auto-style24">
 
                             <asp:LinkButton runat="server" ID="lnkRegistration" Text="Registration" OnClick="lnkRegistration_OnClick"/>
 
                     </td>
 
-                    <td style="background-color: yellow" class="auto-style15">
-                        <label style="text-align: center">
-                            Class Record</label>
+                    <td style="background-color: yellow" class="auto-style26">
+                        
+                 <%--<asp:LinkButton runat="server" ID="lnkClassRecord" Text="Class Record" OnClick="lnkClassRecord_OnClick"/>--%>
+                         <asp:LinkButton runat="server" ID="lnkDailyRecord" Text="Daily Record" OnClick="lnkDailyRecord_OnClick"/>
                     </td>
-                    <td style="background-color: yellow" class="auto-style16">
-                        <label style="text-align: center">
-                            Daily Record</label>
+
+                    <td style="background-color: yellow" class="auto-style27">
+                       
                     </td>
-                    <td style="background-color: yellow" class="auto-style2"></td>
-                    <td style="background-color: yellow" class="auto-style2"></td>
-                    <td style="background-color: yellow" class="auto-style2"></td>
-                    <td style="background-color: yellow" class="auto-style2"></td>
-                    <td style="background-color: yellow" class="auto-style2"></td>
-                    <td style="background-color: yellow" class="auto-style2"></td>
-                    <td style="background-color: yellow" class="auto-style7">
-                        <label style="text-align: center">
-                            History</label>
+                    <td style="background-color: yellow" class="auto-style22"></td>
+                    <td style="background-color: yellow" class="auto-style25">
+                         <asp:LinkButton runat="server" ID="lnkHistory" Text="History" OnClick="lnkHistory_OnClick"/>
                     </td>
-                    <td style="background-color: yellow" class="auto-style2"></td>
+                    <td style="background-color: yellow" class="auto-style15"></td>
                 </tr>
             </table>
+                    </td>
+                </tr>
+            </table>
+
+                    
+      
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>

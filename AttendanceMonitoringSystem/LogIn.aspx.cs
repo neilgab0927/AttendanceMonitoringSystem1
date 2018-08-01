@@ -40,7 +40,7 @@ namespace AttendanceMonitoringSystem
 
                     Cache["user"] = _user;
 
-                    Response.Redirect("Main.aspx");
+                    Response.Redirect("Registration.aspx");
                 }
                 else
                 {
