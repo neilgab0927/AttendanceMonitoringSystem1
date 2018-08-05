@@ -14,7 +14,15 @@ namespace AttendanceMonitoringSystem
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            LoadStudentList(); // sa method na to, nirereset yung id
+            try
+            {
+                if (!string.IsNullOrWhiteSpace(Session["userName"].ToString()))
+                    LoadStudentList();
+            }
+            catch
+            {
+                Response.Redirect("~/LogIn.aspx");
+            }
         }
 
         #region Events
@@ -187,6 +195,8 @@ namespace AttendanceMonitoringSystem
             lblFirtsNameAddEdit.ForeColor = System.Drawing.Color.Black;
             lblMiddleNameAddEdit.ForeColor = System.Drawing.Color.Black;
             lblLastNameAddEdit.ForeColor = System.Drawing.Color.Black;
+            lblProgramAddEdit0.ForeColor = System.Drawing.Color.Black;
+            lblAdmissionYearAddEdit0.ForeColor = System.Drawing.Color.Black;
 
         }
 

@@ -39,9 +39,11 @@
             width: 172px;
             height: 28px;
         }
+
         .auto-style48 {
             width: 46px;
         }
+
         .auto-style49 {
             width: 172px;
         }
@@ -71,12 +73,12 @@
                     <table>
                         <tr>
                             <td>
-                                   <asp:Label runat="server" ID="lblIdAddEdit" Visible="False" />
+                                <asp:Label runat="server" ID="lblIdAddEdit" Visible="False" />
                             </td>
                         </tr>
                         <tr>
                             <td class="auto-style46">
-                                
+
                                 <asp:Label runat="server" ID="lblStudentNumberAddEdit">Student Number:</asp:Label>
                             </td>
 
@@ -129,21 +131,23 @@
 
 
                         </tr>
+                    </table>
 
-                        <tr>
-                            <td class="auto-style45">
-                                <asp:Label ID="LblNote" runat="server" BorderStyle="None" />&nbsp;</td>
-                            <td class="auto-style49"></td>
-                        </tr>
 
-                        <tr>
-                            <td class="auto-style45"></td>
-                            <td class="auto-style49">
-                                <asp:Button runat="server" ID="btnRegister" Text="Register" OnClick="btnRegister_OnClick" Width="89px" />
-                                
-                         
-                            </td>
-                        </tr>
+                    <tr>
+                        <td class="auto-style45">
+                            <asp:Label ID="LblNote" runat="server" BorderStyle="None" />&nbsp;</td>
+                        <td class="auto-style49"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="auto-style45"></td>
+                        <td class="auto-style49">
+                            <asp:Button runat="server" ID="btnRegister" Text="Register" OnClick="btnRegister_OnClick" Width="89px" />
+
+
+                        </td>
+                    </tr>
                 </asp:Panel>
 
             </td>
@@ -157,7 +161,7 @@
                 <table>
                     <tr>
                         <td>
-                            <asp:Panel runat="server" ID="pnlStudent" BorderStyle="solid" BorderWidth="3px">
+                            <asp:Panel runat="server" ID="pnlStudent" BorderStyle="solid" BorderWidth="3px" Visible="False">
                                 <table class="sortable jTPS" style="text-align: center; margin: 20px">
                                     <tr>
                                         <th>ID</th>
