@@ -14,6 +14,7 @@ namespace AttendanceMonitoringSystem
 {
     public partial class LogIn : System.Web.UI.Page
     {
+        DataAccess db = new DataAccess();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -41,6 +42,8 @@ namespace AttendanceMonitoringSystem
                     //Cache["user"] = _user;
 
                     Session["userName"] = _user.Username;
+
+                    db.InsertHistory($" {_user.Username} successfully Logged-in.", DateTime.Now);
 
 
                     Response.Redirect("~/Registration.aspx");

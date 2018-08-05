@@ -10,7 +10,7 @@
 namespace AttendanceMonitoringSystem {
     
     
-    public partial class ClassRecord {
+    public partial class History {
         
         /// <summary>
         /// gvHistory control.
@@ -20,5 +20,23 @@ namespace AttendanceMonitoringSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvHistory;
+        
+        /// <summary>
+        /// pnlHistory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlHistory;
+        
+        /// <summary>
+        /// rptrHistory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptrHistory;
     }
 }

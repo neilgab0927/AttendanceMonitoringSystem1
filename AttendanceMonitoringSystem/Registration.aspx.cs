@@ -31,15 +31,26 @@ namespace AttendanceMonitoringSystem
         {
             if (ValidateNewStudentSubmit())
             {
+                if (!validateDateFormat(txtAdmissionYear0, lblAdmissionYearAddEdit0))
+                {
+                    lblAdmissionYearAddEdit0.ForeColor = System.Drawing.Color.Red;
+                    return;
+                }
+
                 // kapag walang error sa pagvalidate ni "ValidateNewStudentSubmit"
-                db.InsertUpdateStudent(Convert.ToInt32(lblIdAddEdit.Text), txtStudentNumber.Text, txtStudentFirstName.Text, 
-                    txtStudentMiddleName.Text, txtStudentLastName.Text, true, txtProgram0.Text, Convert.ToDateTime(txtAdmissionYear0.Text)); 
+                db.InsertUpdateStudent(Convert.ToInt32(lblIdAddEdit.Text), txtStudentNumber.Text, txtStudentFirstName.Text,
+                    txtStudentMiddleName.Text, txtStudentLastName.Text, true, txtProgram0.Text, Convert.ToDateTime(txtAdmissionYear0.Text));
+
+                var nameOfStudent = $"{txtStudentLastName.Text}, {txtStudentFirstName.Text} {txtStudentMiddleName.Text}";
+                var studentNumber = $"{txtStudentNumber.Text}";
+                db.InsertHistory($"({ studentNumber }) { nameOfStudent } successfully added.", DateTime.Now);
 
                 isStudentFieldsEnabled(false);
                 LoadStudentList();
                 ClearPanels();
                 ClearNewStudentFields();
                 pnlStudentFields.Visible = false;
+
             }
             else
             {
@@ -54,7 +65,7 @@ namespace AttendanceMonitoringSystem
         //    btnRegister.Enabled = true;
 
         //    ClearNewStudentFields();
-           
+
         //}
 
         protected void rptrStudent_OnItemCommand(object source, RepeaterCommandEventArgs e)
@@ -86,7 +97,7 @@ namespace AttendanceMonitoringSystem
                 txtProgram0.Text = lblStudentProgram.Text;
                 // set admissionYear
                 DateTime dt = Convert.ToDateTime(lblStudentAdmissionYear.Text);
-                txtAdmissionYear0.Text = string.Format("{0:MMM dd, yyyy}", dt); 
+                txtAdmissionYear0.Text = string.Format("{0:MMM dd, yyyy}", dt);
 
             }
 
@@ -108,6 +119,24 @@ namespace AttendanceMonitoringSystem
         #endregion
 
         #region Functions
+
+        bool validateDateFormat(TextBox txtBoxDate, Label lblDate)
+        {
+            bool _valid = true;
+
+            // Date
+            DateTime dateFormat;
+            bool _date = DateTime.TryParse(txtBoxDate.Text, out dateFormat);
+            if (!_date)
+            {
+                lblDate.ForeColor = System.Drawing.Color.Red;
+                _valid = false;
+            }
+            else
+                lblDate.ForeColor = System.Drawing.Color.Gray;
+
+            return _valid;
+        }
 
         private bool ValidateNewStudentSubmit()
         {
@@ -163,11 +192,7 @@ namespace AttendanceMonitoringSystem
             else
                 lblAdmissionYearAddEdit0.ForeColor = System.Drawing.Color.Black;
 
-
-
-
             return _valid;
-
         }
 
         // bind List of StudentModel to repeater
@@ -187,7 +212,7 @@ namespace AttendanceMonitoringSystem
             txtStudentMiddleName.Text = "";
             txtStudentLastName.Text = "";
             txtProgram0.Text = "";
-            txtAdmissionYear0.Text ="";
+            txtAdmissionYear0.Text = "";
 
             isStudentFieldsEnabled(true);
 

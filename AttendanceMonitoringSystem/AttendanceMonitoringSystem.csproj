@@ -402,6 +402,7 @@
       <DependentUpon>Main.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\DailyRecordModel.cs" />
+    <Compile Include="Models\HistoryModel.cs" />
     <Compile Include="Models\StudentModel.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

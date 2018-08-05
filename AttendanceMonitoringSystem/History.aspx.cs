@@ -7,11 +7,15 @@ using System.Web.UI.WebControls;
 
 namespace AttendanceMonitoringSystem
 {
-    public partial class ClassRecord : System.Web.UI.Page
+    public partial class History : System.Web.UI.Page
     {
+        DataAccess db = new DataAccess();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            rptrHistory.DataSource = db.GetListOfHistory();
+            rptrHistory.DataBind();
         }
+
+        
     }
 }

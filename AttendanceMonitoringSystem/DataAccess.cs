@@ -96,6 +96,39 @@ namespace AttendanceMonitoringSystem
 
         #endregion
 
+        #region History
+
+        public void InsertHistory(string description, DateTime date)
+        {
+            using (IDbConnection connection = new SqlConnection(Helper.CnnVal("AMSconnect")))
+            {
+                List<HistoryModel> history = new List<HistoryModel> // create new List<StudentModel>
+                {
+                    new HistoryModel() // instantiate new StudentModel
+                    {
+                        Description = description,
+                        Date = date
+                    }
+                };
+
+                connection.Execute("spHistory_Insert @description, @date", history);
+            }
+        }
+
+
+        
+        // bind to repeater
+        public List<HistoryModel> GetListOfHistory()
+        {
+            using (IDbConnection connection = new SqlConnection(Helper.CnnVal("AMSconnect")))
+            {
+                var output = connection.Query<HistoryModel>("spHistory_GetList").ToList();
+                return output;
+            }
+        }
+
+        #endregion
+
 
         //public List<Person> GetPeople(string lastName)
         //{
