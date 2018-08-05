@@ -22,6 +22,24 @@ namespace AttendanceMonitoringSystem {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
+        /// btnRegisterNew control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRegisterNew;
+        
+        /// <summary>
+        /// pnlStudentFields control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlStudentFields;
+        
+        /// <summary>
         /// lblIdAddEdit control.
         /// </summary>
         /// <remarks>
@@ -121,13 +139,13 @@ namespace AttendanceMonitoringSystem {
         protected global::System.Web.UI.WebControls.TextBox txtProgram0;
         
         /// <summary>
-        /// Label1 control.
+        /// lblAdmissionYearAddEdit0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblAdmissionYearAddEdit0;
         
         /// <summary>
         /// txtAdmissionYear0 control.
@@ -164,15 +182,6 @@ namespace AttendanceMonitoringSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnRegister;
-        
-        /// <summary>
-        /// btnRegisterNew control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRegisterNew;
         
         /// <summary>
         /// pnlStudent control.

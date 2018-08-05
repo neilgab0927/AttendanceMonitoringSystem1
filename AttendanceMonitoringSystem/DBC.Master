@@ -12,16 +12,6 @@
             width: 97px;
         }
 
-        .auto-style9 {
-            width: 1309px;
-            height: 12px;
-        }
-
-        .auto-style10 {
-            width: 246px;
-            height: 12px;
-        }
-
         .auto-style14 {
             height: 6px;
         }
@@ -30,7 +20,7 @@
             width: 370px;
         }
         .auto-style22 {
-            width: 1424px;
+            width: 1396px;
         }
         .auto-style24 {
             width: 129px;
@@ -39,34 +29,50 @@
             width: 94px;
         }
         .auto-style26 {
-            width: 360px;
-        }
-        .auto-style27 {
-            width: 375px;
+            width: 188px;
         }
         .auto-style28 {
-            width: 356px;
+            width: 310px;
         }
         .auto-style29 {
-            width: 135px;
-            height: 106px;
+            width: 92px;
+            height: 82px;
         }
         .auto-style30 {
             width: 100%;
-            height: 18px;
+            height: 34px;
         }
         .auto-style31 {
             width: 100%;
-            height: 109px;
+            height: 50px;
+            margin-bottom: 0px;
         }
         .auto-style32 {
             width: 100%;
-            height: 84px;
+            height: 91px;
+        }
+
+        .auto-style33 {
+            height: 51px;
+            width: 590px;
+        }
+
+        .auto-style34 {
+            width: 74px;
+        }
+        .auto-style35 {
+            width: 629px;
+            height: 17px;
+            margin-bottom: 1px;
+        }
+        .auto-style36 {
+            width: 637px;
+            height: 15px;
         }
 
         </style>
 </head>
-<body>
+<body style="width: 1271px; height: 130px; margin-bottom: 6px">
     <form id="form1" runat="server">
         <div>
             <table style="background-color:blue; " class="auto-style32">
@@ -74,25 +80,23 @@
                     <td>
                         <table style="background-color:blue;" class="auto-style31">
                 <tr>
-                     <td style="background-color: Blue" class="auto-style1">&nbsp; <img src="Pictures/DBCLogo.png" alt="DBClogo" class="auto-style29" /></td>
+                     <td style="background-color: Blue" class="auto-style1">&nbsp;<img src="Pictures/DBCLogo.png" alt="DBClogo" class="auto-style29" /></td>
 
                    <td>
-                       <table>
+                       <table class="auto-style33">
                            <tr>
                                 <td style="background-color: Blue">
                                     <table>
                                         <tr>
-                                            <td class="auto-style9"></td>
-                                            <td class="auto-style10">
-                                                <asp:Label runat="server" CssClass="header-display-section" ID="lblDate"></asp:Label></td>
+
                                         </tr>
                                     </table>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="background-color: Blue" class="auto-style14">
-                                    <h1>DON BOSCO COLLEGE -CANLUBANG</h1>
-                                     <h2>Ad Maiora Natus</h2>
+                                    <h1 class="auto-style35">DON BOSCO COLLEGE -CANLUBANG</h1>
+                                     <h2 class="auto-style36">Ad Maiora Natus</h2>
                                 </td>
                             </tr>
                         
@@ -122,14 +126,21 @@
                          <asp:LinkButton runat="server" ID="lnkDailyRecord" Text="Daily Record" OnClick="lnkDailyRecord_OnClick"/>
                     </td>
 
-                    <td style="background-color: yellow" class="auto-style27">
+                    <td style="background-color: yellow" class="auto-style34">
+                       
+                         <asp:LinkButton runat="server" ID="lnkHistory" Text="History" OnClick="lnkHistory_OnClick"/>
                        
                     </td>
-                    <td style="background-color: yellow" class="auto-style22"></td>
-                    <td style="background-color: yellow" class="auto-style25">
-                         <asp:LinkButton runat="server" ID="lnkHistory" Text="History" OnClick="lnkHistory_OnClick"/>
+                    <td style="background-color: yellow" class="auto-style22">
+                         <asp:LinkButton runat="server" ID="lnkClassRecord" Text="Class Record" OnClick="lnkClassRecord_OnClick"/>
                     </td>
-                    <td style="background-color: yellow" class="auto-style15"></td>
+                    <td style="background-color: yellow" class="auto-style25">
+                         &nbsp;</td>
+                    <td style="background-color: yellow" class="auto-style15">
+                         <asp:Label runat="server" CssClass="header-display-section" ID="lblDate"></asp:Label></td>
+                    <td>
+
+                    </td>
                 </tr>
             </table>
                     </td>

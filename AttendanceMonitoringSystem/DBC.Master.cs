@@ -31,7 +31,12 @@ namespace AttendanceMonitoringSystem
 
         protected void lnkHistory_OnClick(object sender, EventArgs e)
         {
-            Response.Redirect("History");
+            Response.Redirect("History.aspx");
+        }
+
+        protected void lnkClassRecord_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("ClassRecord.aspx");
         }
     }
 }

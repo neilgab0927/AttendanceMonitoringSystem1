@@ -14,7 +14,7 @@ namespace AttendanceMonitoringSystem
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            LoadStudentList();
+            LoadStudentList(); // sa method na to, nirereset yung id
         }
 
         #region Events
@@ -25,15 +25,13 @@ namespace AttendanceMonitoringSystem
             {
                 // kapag walang error sa pagvalidate ni "ValidateNewStudentSubmit"
                 db.InsertUpdateStudent(Convert.ToInt32(lblIdAddEdit.Text), txtStudentNumber.Text, txtStudentFirstName.Text, 
-                    txtStudentMiddleName.Text, txtStudentLastName.Text, true, txtProgram0.Text, Convert.ToDateTime(txtAdmissionYear0.Text)); // gagawa tayo new textbox for Program and AdmissionYear
+                    txtStudentMiddleName.Text, txtStudentLastName.Text, true, txtProgram0.Text, Convert.ToDateTime(txtAdmissionYear0.Text)); 
 
-                btnRegisterStudent_OnClick(sender, e);
                 isStudentFieldsEnabled(false);
                 LoadStudentList();
                 ClearPanels();
                 ClearNewStudentFields();
-
-
+                pnlStudentFields.Visible = false;
             }
             else
             {
@@ -41,20 +39,15 @@ namespace AttendanceMonitoringSystem
             }
         }
 
-        protected void btnRegisterStudent_OnClick(object sender, EventArgs e)
-        {
-            //lblIdAddEdit.Text = "0";
-            //pnlStudent.Visible = true;
-            btnRegister.Enabled = true;
+        //protected void btnRegisterStudent_OnClick(object sender, EventArgs e)
+        //{
+        //    //lblIdAddEdit.Text = "0";
+        //    //pnlStudent.Visible = true;
+        //    btnRegister.Enabled = true;
 
-            ClearNewStudentFields();
-            isStudentFieldsEnabled(true);
-
-            lblStudentNumberAddEdit.ForeColor = System.Drawing.Color.Black;
-            lblFirtsNameAddEdit.ForeColor = System.Drawing.Color.Black;
-            lblMiddleNameAddEdit.ForeColor = System.Drawing.Color.Black;
-            lblLastNameAddEdit.ForeColor = System.Drawing.Color.Black;
-        }
+        //    ClearNewStudentFields();
+           
+        //}
 
         protected void rptrStudent_OnItemCommand(object source, RepeaterCommandEventArgs e)
         {
@@ -71,7 +64,6 @@ namespace AttendanceMonitoringSystem
             Label lblStudentAdmissionYear = (Label)e.Item.FindControl("lblStudentAdmissionYear");
 
 
-
             if (e.CommandName == "Edit")
             {
                 //pnlStudent.Visible = true;
@@ -85,8 +77,8 @@ namespace AttendanceMonitoringSystem
                 // set program
                 txtProgram0.Text = lblStudentProgram.Text;
                 // set admissionYear
-                DateTime dt = Convert.ToDateTime(lblStudentAdmissionYear.Text) ;
-                txtAdmissionYear0.Text = string.Format("{0:mm-dd-yyyy}", dt);
+                DateTime dt = Convert.ToDateTime(lblStudentAdmissionYear.Text);
+                txtAdmissionYear0.Text = string.Format("{0:MMM dd, yyyy}", dt); 
 
             }
 
@@ -145,6 +137,27 @@ namespace AttendanceMonitoringSystem
             else
                 lblLastNameAddEdit.ForeColor = System.Drawing.Color.Black;
 
+
+            if (string.IsNullOrWhiteSpace(txtProgram0.Text))
+            {
+                lblProgramAddEdit0.ForeColor = System.Drawing.Color.Red;
+                _valid = false;
+            }
+            else
+                lblProgramAddEdit0.ForeColor = System.Drawing.Color.Black;
+
+
+            if (string.IsNullOrWhiteSpace(txtAdmissionYear0.Text))
+            {
+                lblAdmissionYearAddEdit0.ForeColor = System.Drawing.Color.Red;
+                _valid = false;
+            }
+            else
+                lblAdmissionYearAddEdit0.ForeColor = System.Drawing.Color.Black;
+
+
+
+
             return _valid;
 
         }
@@ -155,6 +168,7 @@ namespace AttendanceMonitoringSystem
             // si db yung instance ni DataAccess
             rptrStudent.DataSource = db.GetListOfStudents();
             rptrStudent.DataBind();
+            //lblIdAddEdit.Text = "0";
         }
 
         private void ClearNewStudentFields()
@@ -167,6 +181,13 @@ namespace AttendanceMonitoringSystem
             txtProgram0.Text = "";
             txtAdmissionYear0.Text ="";
 
+            isStudentFieldsEnabled(true);
+
+            lblStudentNumberAddEdit.ForeColor = System.Drawing.Color.Black;
+            lblFirtsNameAddEdit.ForeColor = System.Drawing.Color.Black;
+            lblMiddleNameAddEdit.ForeColor = System.Drawing.Color.Black;
+            lblLastNameAddEdit.ForeColor = System.Drawing.Color.Black;
+
         }
 
         private void isStudentFieldsEnabled(bool value)
@@ -178,6 +199,8 @@ namespace AttendanceMonitoringSystem
             txtStudentLastName.Enabled = value;
             txtProgram0.Enabled = value;
             txtAdmissionYear0.Enabled = value;
+            pnlStudentFields.Visible = value;
+
         }
 
         #endregion

@@ -11,11 +11,6 @@
             width: 100%;
         }
 
-        .auto-style10 {
-            width: 149px;
-            height: 67px;
-        }
-
         .auto-style14 {
             height: 333px;
             width: 498px;
@@ -31,24 +26,24 @@
             width: 379px;
         }
 
-        .auto-style43 {
-            width: 80px;
-        }
-
-        .auto-style44 {
-            width: 139px;
-        }
-
         .auto-style45 {
             width: 111px;
         }
+
         .auto-style46 {
             width: 111px;
-            height: 59px;
+            height: 28px;
         }
+
         .auto-style47 {
-            width: 139px;
-            height: 59px;
+            width: 172px;
+            height: 28px;
+        }
+        .auto-style48 {
+            width: 46px;
+        }
+        .auto-style49 {
+            width: 172px;
         }
     </style>
 
@@ -68,80 +63,94 @@
 
     <table style="width: 100%" class="RegsForm">
         <tr>
-            <td class="auto-style43"></td>
+            <td class="auto-style48"></td>
             <td class="auto-style42">
-                <table>
-                    <tr>
-                        <td class="auto-style46">
-                            <asp:Label runat="server" ID="lblIdAddEdit" Visible="False" />
-                            <asp:Label runat="server" ID="lblStudentNumberAddEdit">Student Number:</asp:Label>
-                        </td>
+                <asp:Button runat="server" ID="btnRegisterNew" Text="New" OnClick="btnRegisterNew_OnClick" Width="89px" />
+                <asp:Panel ID="pnlStudentFields" runat="server" Visible="false">
 
-                        <td class="auto-style47">
-                            <asp:TextBox runat="server" ID="txtStudentNumber" Width="220px" /></td>
-                    </tr>
+                    <table>
+                        <tr>
+                            <td>
+                                   <asp:Label runat="server" ID="lblIdAddEdit" Visible="False" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style46">
+                                
+                                <asp:Label runat="server" ID="lblStudentNumberAddEdit">Student Number:</asp:Label>
+                            </td>
 
-                    <tr>
-                        <td class="auto-style45">
-                            <asp:Label runat="server" ID="lblFirtsNameAddEdit">First Name:</asp:Label>
+                            <td class="auto-style47">
+                                <asp:TextBox runat="server" ID="txtStudentNumber" Width="220px" /></td>
+                        </tr>
 
-                        </td>
-                        <td class="auto-style44">
-                            <asp:TextBox runat="server" ID="txtStudentFirstName" Width="222px" />
-                        </td>
-                    </tr>
+                        <tr>
+                            <td class="auto-style45">
+                                <asp:Label runat="server" ID="lblFirtsNameAddEdit">First Name:</asp:Label>
 
-                    <tr>
-                        <td class="auto-style45">
-                            <asp:Label runat="server" ID="lblMiddleNameAddEdit">Middle Name:</asp:Label></td>
-                        <td class="auto-style44">
-                            <asp:TextBox runat="server" ID="txtStudentMiddleName" Width="221px" /></td>
-                    </tr>
+                            </td>
+                            <td class="auto-style49">
+                                <asp:TextBox runat="server" ID="txtStudentFirstName" Width="222px" />
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td class="auto-style45">
-                            <asp:Label runat="server" ID="lblLastNameAddEdit">Last Name:</asp:Label></td>
-                        <td class="auto-style44">
-                            <asp:TextBox runat="server" ID="txtStudentLastName" Width="221px" /></td>
-                    </tr>
+                        <tr>
+                            <td class="auto-style45">
+                                <asp:Label runat="server" ID="lblMiddleNameAddEdit">Middle Name:</asp:Label></td>
+                            <td class="auto-style49">
+                                <asp:TextBox runat="server" ID="txtStudentMiddleName" Width="221px" /></td>
+                        </tr>
 
-                    <tr>
-                        <td class="auto-style45">
-                            <asp:Label ID="lblProgramAddEdit0" runat="server">Program:</asp:Label></td>
-                        <td class="auto-style44">
-                            <asp:TextBox runat="server" ID="txtProgram0" Width="221px" /></td>
-                    </tr>
+                        <tr>
+                            <td class="auto-style45">
+                                <asp:Label runat="server" ID="lblLastNameAddEdit">Last Name:</asp:Label></td>
+                            <td class="auto-style49">
+                                <asp:TextBox runat="server" ID="txtStudentLastName" Width="221px" /></td>
+                        </tr>
 
-                    <tr>
-                        <td class="auto-style45">
-                            <asp:Label ID="Label1" runat="server">Admission Year:</asp:Label></td>
-                        <td class="auto-style44">
-                            <asp:TextBox runat="server" ID="txtAdmissionYear0" Width="221px" />
-                            <!-- TargetControlID = yung tatargetin niyang textbox -->
-                        <ajaxToolkit:CalendarExtender ID="CalendatExtender6" runat="server"
-                            TargetControlID="txtAdmissionYear0"
-                            Format="MMM dd, yyyy"
-                            PopupPosition="BottomRight" PopupButtonID="Image1" />
-                        </td>
+                        <tr>
+                            <td class="auto-style45">
+                                <asp:Label ID="lblProgramAddEdit0" runat="server">Program:</asp:Label></td>
+                            <td class="auto-style49">
+                                <asp:TextBox runat="server" ID="txtProgram0" Width="221px" /></td>
+                        </tr>
+
+                        <tr>
+                            <td class="auto-style45">
+                                <asp:Label ID="lblAdmissionYearAddEdit0" runat="server">Admission Year:</asp:Label></td>
+                            <td class="auto-style49">
+                                <asp:TextBox runat="server" ID="txtAdmissionYear0" Width="221px" />
+                                <!-- TargetControlID = yung tatargetin niyang textbox -->
+                                <ajaxToolkit:CalendarExtender ID="CalendatExtender6" runat="server"
+                                    TargetControlID="txtAdmissionYear0"
+                                    Format="MMM dd, yyyy"
+                                    PopupPosition="BottomRight" PopupButtonID="Image1" />
+                            </td>
 
 
-                    </tr>
+                        </tr>
 
-                    <tr>
-                        <td class="auto-style45">
-                            <asp:Label ID="LblNote" runat="server" BorderStyle="None" />&nbsp;</td>
-                        <td class="auto-style44"></td>
-                    </tr>
+                        <tr>
+                            <td class="auto-style45">
+                                <asp:Label ID="LblNote" runat="server" BorderStyle="None" />&nbsp;</td>
+                            <td class="auto-style49"></td>
+                        </tr>
 
-                    <tr>
-                        <td class="auto-style45"></td>
-                        <td class="auto-style44">
-                            <asp:Button runat="server" ID="btnRegister" Text="Register" OnClick="btnRegister_OnClick" Width="89px" /></td>
-                        <asp:Button runat="server" ID="btnRegisterNew" Text="New" OnClick="btnRegisterNew_OnClick" Width="89px" />
+                        <tr>
+                            <td class="auto-style45"></td>
+                            <td class="auto-style49">
+                                <asp:Button runat="server" ID="btnRegister" Text="Register" OnClick="btnRegister_OnClick" Width="89px" />
+                                
+                         
+                            </td>
+                        </tr>
+                </asp:Panel>
+
             </td>
         </tr>
 
     </table>
+
     </td>
 
             <td>
