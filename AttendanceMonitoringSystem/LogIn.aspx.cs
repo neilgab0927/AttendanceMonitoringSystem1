@@ -38,9 +38,13 @@ namespace AttendanceMonitoringSystem
                         Password = user.Password
                     };
 
-                    Cache["user"] = _user;
+                    //Cache["user"] = _user;
 
-                    Response.Redirect("Registration.aspx");
+                    Session["userName"] = _user.Username;
+
+
+                    Response.Redirect("~/Registration.aspx");
+
                 }
                 else
                 {
