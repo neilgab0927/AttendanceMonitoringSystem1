@@ -2,14 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style9 {
-            width: 180px;
-        }
-
-        .auto-style10 {
-            height: 26px;
-        }
-
+        
         .auto-style11 {
             height: 37px;
         }
@@ -19,18 +12,18 @@
             height: 196px;
         }
 
-        .auto-style13 {
-            height: 23px;
-            width: 100%;
-        }
-
-        .auto-style18 {
-            width: 653px;
-        }
-
         .auto-style19 {
             height: 0px;
             width: 100%;
+        }
+        .auto-style37 {
+            width: 190px;
+        }
+        .auto-style38 {
+            width: 633px;
+        }
+        .auto-style39 {
+            width: 118px;
         }
     </style>
 </asp:Content>
@@ -52,8 +45,12 @@
     </table>
     <table class="auto-style12">
         <tr>
-            <td class="auto-style18"></td>
-            <td class="auto-style9">
+            <td class="auto-style37">&nbsp;</td>
+            <td class="auto-style39">
+
+
+                <%--<asp:GridView ID="gvDailyRecord" runat="server" CssClass="gv" Width="655px">
+                        </asp:GridView>--%>
 
                 <table class="auto-style38" style="text-align: center; margin-right: 20px; margin-top: 20px; margin-bottom: 20px;" __designer:mapid="336">
                     <tr __designer:mapid="337">
@@ -87,12 +84,12 @@
                                 </td>
                                
                                 <td>
-                                    <asp:LinkButton ID="lnkEdit" runat="server" CommandName="Edit">
+<%--                                    <asp:LinkButton ID="lnkEdit" runat="server" CommandName="Edit">
                                 <img width="22" height="22" src="layout/images/icons/update.png" style="margin-left: 10px; margin-right: 10px;" alt="Update" title="Update"/>
                                     </asp:LinkButton>
                                     <asp:LinkButton ID="lnkRemoveUser" runat="server" CommandName="Delete" OnClientClick="return confirm('Are you sure to delete the selected records?')">
                                 <img width="22" height="22" src="layout/images/icons/delete.png" style="margin-left: 10px;" alt="Remove" title="Remove"/>
-                                    </asp:LinkButton>
+                                    </asp:LinkButton>--%>
                                 </td>
                             </tr>
                         </ItemTemplate>
@@ -100,10 +97,8 @@
                 </table>
 
 
-                <%--<asp:GridView ID="gvDailyRecord" runat="server" CssClass="gv" Width="655px">
-                        </asp:GridView>--%>
             </td>
-            <td></td>
+            <td class="auto-style37"></td>
         </tr>
     </table>
 </asp:Content>
