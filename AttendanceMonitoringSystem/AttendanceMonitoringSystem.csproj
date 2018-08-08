@@ -340,6 +340,9 @@
     <Content Include="bin\roslyn\vbc.exe.config" />
     <Content Include="bin\roslyn\vbc.rsp" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="_Files\AMS-aug 5\spHistory_GetList.sql" />
+    <Content Include="_Files\AMS-aug 5\spHistory_Insert.sql" />
+    <Content Include="_Files\AMS-aug 5\[History].sql" />
     <None Include="packages\jQuery.1.9.1\Content\Scripts\jquery-1.9.1-vsdoc.js" />
     <Content Include="packages\jQuery.1.9.1\Content\Scripts\jquery-1.9.1.js" />
     <Content Include="packages\jQuery.1.9.1\Content\Scripts\jquery-1.9.1.min.js" />
