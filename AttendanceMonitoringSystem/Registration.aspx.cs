@@ -17,8 +17,11 @@ namespace AttendanceMonitoringSystem
             try
             {
                 if (!string.IsNullOrWhiteSpace(Session["userName"].ToString()))
+                {
                     LoadStudentList();
-               
+                    isStudentFieldsEnabled(true);
+                }
+
             }
             catch
             {
@@ -30,6 +33,9 @@ namespace AttendanceMonitoringSystem
 
         protected void btnRegister_OnClick(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(lblIdAddEdit.Text))
+                lblIdAddEdit.Text = "0";
+
             if (ValidateNewStudentSubmit())
             {
                 if (!validateDateFormat(txtAdmissionYear0, lblAdmissionYearAddEdit0))
@@ -46,11 +52,9 @@ namespace AttendanceMonitoringSystem
                 var studentNumber = $"{txtStudentNumber.Text}";
                 db.InsertHistory($"({ studentNumber }) { nameOfStudent } successfully added.", DateTime.Now);
 
-                isStudentFieldsEnabled(false);
                 LoadStudentList();
                 ClearPanels();
                 ClearNewStudentFields();
-                pnlStudentFields.Visible = false;
 
             }
             else
@@ -120,7 +124,7 @@ namespace AttendanceMonitoringSystem
 
         #endregion
 
-  
+
         //private void OnShown()
         //{
         //    base.OnShown();

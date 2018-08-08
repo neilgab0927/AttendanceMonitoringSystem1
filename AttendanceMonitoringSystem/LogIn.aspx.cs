@@ -46,7 +46,7 @@ namespace AttendanceMonitoringSystem
                     db.InsertHistory($" {_user.Username} successfully Logged-in.", DateTime.Now);
 
 
-                    Response.Redirect("~/ClassRecord.aspx");
+                    Response.Redirect("~/Registration.aspx");
 
                 }
                 else
