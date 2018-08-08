@@ -12,12 +12,18 @@ namespace AttendanceMonitoringSystem
     {
         DataAccess db = new DataAccess();
 
+        protected void btnRegisterNew_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Registration.aspx");
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
-          LoadStudentList(); // sa method na to, nirereset yung id
-          
+            LoadStudentList(); // sa method na to, nirereset yung id
+
         }
+
         private void LoadStudentList()
         {
             // si db yung instance ni DataAccess
@@ -25,7 +31,6 @@ namespace AttendanceMonitoringSystem
             rptrStudent.DataBind();
             //lblIdAddEdit.Text = "0";
         }
-
 
         protected void rptrStudent_OnItemCommand(object source, RepeaterCommandEventArgs e)
         {
@@ -41,33 +46,13 @@ namespace AttendanceMonitoringSystem
             Label lblStudentYear = (Label)e.Item.FindControl("lblStudentYear");
             Label lblStudentAdmissionYear = (Label)e.Item.FindControl("lblStudentAdmissionYear");
 
-
-            //if (e.CommandName == "Edit")
-            //{
-            //    //pnlStudent.Visible = true;
-            //    isStudentFieldsEnabled(true);
-
-            //    lblIdAddEdit.Text = lblId.Text;
-            //    txtStudentNumber.Text = lblStudentId.Text;
-            //    txtStudentFirstName.Text = lblStudentLastName.Text;
-            //    txtStudentMiddleName.Text = lblStudentFirstName.Text;
-            //    txtStudentLastName.Text = lblStudentMiddleName.Text;
-            //    // set program
-            //    txtProgram0.Text = lblStudentProgram.Text;
-            //    // set admissionYear
-            //    DateTime dt = Convert.ToDateTime(lblStudentAdmissionYear.Text);
-            //    txtAdmissionYear0.Text = string.Format("{0:MMM dd, yyyy}", dt); 
-
-            //}
-
-            if (e.CommandName == "Delete")
-            {
-                db.DeleteStudentById(Convert.ToInt32(lblId.Text));
-                LoadStudentList();
-            }
-
         }
+
+
+
+
+
+
+
     }
-
-
 }

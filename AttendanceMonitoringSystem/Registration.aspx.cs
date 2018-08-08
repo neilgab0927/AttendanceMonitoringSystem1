@@ -18,6 +18,7 @@ namespace AttendanceMonitoringSystem
             {
                 if (!string.IsNullOrWhiteSpace(Session["userName"].ToString()))
                     LoadStudentList();
+               
             }
             catch
             {
@@ -113,10 +114,18 @@ namespace AttendanceMonitoringSystem
         {
             isStudentFieldsEnabled(true);
             ClearNewStudentFields();
+            //OnShown();
         }
 
 
         #endregion
+
+  
+        //private void OnShown()
+        //{
+        //    base.OnShown();
+        //    this.btnRegisterNew_OnClick(null, null);
+        //}
 
         #region Functions
 

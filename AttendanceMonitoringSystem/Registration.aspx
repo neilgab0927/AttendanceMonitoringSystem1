@@ -68,12 +68,12 @@
             <td class="auto-style48"></td>
             <td class="auto-style42">
                 <asp:Button runat="server" ID="btnRegisterNew" Text="New" OnClick="btnRegisterNew_OnClick" Width="89px" />
-                <asp:Panel ID="pnlStudentFields" runat="server" Visible="false">
+                <asp:Panel ID="pnlStudentFields" runat="server">
 
                     <table>
                         <tr>
                             <td>
-                                <asp:Label runat="server" ID="lblIdAddEdit" Visible="False" />
+                                <asp:Label runat="server" ID="lblIdAddEdit" visible="false"/>
                             </td>
                         </tr>
                         <tr>
@@ -161,7 +161,7 @@
                 <table>
                     <tr>
                         <td>
-                            <asp:Panel runat="server" ID="pnlStudent" BorderStyle="solid" BorderWidth="3px" Visible="False">
+                            <asp:Panel runat="server" ID="pnlStudent" BorderStyle="solid" BorderWidth="3px">
                                 <table class="sortable jTPS" style="text-align: center; margin: 20px">
                                     <tr>
                                         <th>ID</th>
