@@ -84,7 +84,7 @@
                             <asp:Label ID="lblHistoryDescription" runat="server" Text='<%#Bind("Description") %>'></asp:Label>
                         </td>
                         <td>
-                            <asp:Label ID="lblHistoryDate" runat="server" Text='<%#Bind("Date", "{0:MMMM dd, yyyy}") %>'></asp:Label>
+                            <asp:Label ID="lblHistoryDate" runat="server" Text='<%#Bind("Date", "{0:MMMM dd, yyy hh:mm:ss tt}") %>'></asp:Label>
                         </td>
                         
                     </tr>
