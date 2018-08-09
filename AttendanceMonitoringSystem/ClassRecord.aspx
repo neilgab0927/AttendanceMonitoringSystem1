@@ -40,7 +40,7 @@
             <tr>
                 
                 <td class="auto-style46">
-                    <asp:Button runat="server" ID="btnRegisterNew" Text="New" Width="104px" CssClass="auto-style47" OnClick="btnRegisterNew_Click" />
+                    <asp:Button runat="server" ID="btnRegisterNew" Text="New Student" Width="115px" CssClass="auto-style47" OnClick="btnRegisterNew_Click" />
                 </td>
                 <td></td>
             </tr>

@@ -2,40 +2,40 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
+
+        .back{
+
+            background-image:url('Pictures/aaa.jpg');
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:cover;
+            width:100%;
+
+        }
         
-        .auto-style11 {
-            height: 37px;
-        }
-
-        .auto-style12 {
-            width: 100%;
-            height: 196px;
-        }
-
-        .auto-style19 {
-            height: 0px;
-            width: 100%;
-        }
+ 
         .auto-style37 {
-            width: 190px;
+            background-image: url('Pictures/aaa.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            width: 100%;
+            height: 416px;
         }
-        .auto-style38 {
-            width: 633px;
-        }
-        .auto-style39 {
-            width: 118px;
-        }
-    </style>
+        
+ 
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <table style="width: 100%; background-image: url(Pictures/Background.png)">
+   <div class="auto-style37">
+        <table style="width: 100%; /*background-image: url(Pictures/Background.png)*/">
         <tr>
             <td>
                 <table class="auto-style19">
                     <tr>
                         <td class="auto-style11">
-                            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DAILY RECORD</h3>
+                            <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DAILY RECORD</h4>
                         </td>
                     </tr>
                 </table>
@@ -44,22 +44,17 @@
 
     </table>
     <table class="auto-style12">
+
         <tr>
-            <td class="auto-style37">&nbsp;</td>
             <td class="auto-style39">
-
-
-                <%--<asp:GridView ID="gvDailyRecord" runat="server" CssClass="gv" Width="655px">
-                        </asp:GridView>--%>
-
-                <table class="auto-style38" style="text-align: center; margin-right: 20px; margin-top: 20px; margin-bottom: 20px;" __designer:mapid="336">
-                    <tr __designer:mapid="337">
-                        <th __designer:mapid="338">ID</th>
-                        <th __designer:mapid="339">Student ID</th>
-                        <th __designer:mapid="33b">Name</th>
-                        <th __designer:mapid="33d">Program</th>
-                        <th __designer:mapid="33e">Year</th>
-                        <th __designer:mapid="33e">Date</th>
+                &nbsp;&nbsp;&nbsp;<table class="auto-style38" style="text-align: center; margin-right: 20px; margin-top: 0px; margin-bottom: 0px; margin-left:20px;"designer:mapid="336">
+                    <tr designer:mapid="337">
+                        <th _designer:mapid="338">ID</th>
+                        <th _designer:mapid="339">Student ID</th>
+                        <th _designer:mapid="33b">Name</th>
+                        <th _designer:mapid="33d">Program</th>
+                        <th _designer:mapid="33e">Year</th>
+                        <th _designer:mapid="33e">Date</th>
                     </tr>
                     <asp:Repeater runat="server" ID="rptrDailyRecord">
                         <ItemTemplate>
@@ -95,10 +90,10 @@
                         </ItemTemplate>
                     </asp:Repeater>
                 </table>
-
-
             </td>
-            <td class="auto-style37"></td>
+           
         </tr>
     </table>
+
+   </div>
 </asp:Content>

@@ -40,12 +40,11 @@
             height: 28px;
         }
 
-        .auto-style48 {
-            width: 46px;
-        }
-
         .auto-style49 {
             width: 172px;
+        }
+        .auto-style50 {
+            width: 1px;
         }
     </style>
 
@@ -65,9 +64,9 @@
 
     <table style="width: 100%" class="RegsForm">
         <tr>
-            <td class="auto-style48"></td>
+            <td class="auto-style50"></td>
             <td class="auto-style42">
-                <asp:Button runat="server" ID="btnRegisterNew" Text="New" OnClick="btnRegisterNew_OnClick" Width="89px" />
+                <asp:Button runat="server" ID="btnRegisterNew" Text="New" OnClick="btnRegisterNew_OnClick" Width="89px" Visible="false"/>
                 <asp:Panel ID="pnlStudentFields" runat="server">
 
                     <table>

@@ -340,6 +340,14 @@
     <Content Include="bin\roslyn\vbc.exe.config" />
     <Content Include="bin\roslyn\vbc.rsp" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="Pictures\aaa.jpg" />
+    <Content Include="Pictures\bbb.jpg" />
+    <Content Include="Pictures\ccc.jpg" />
+    <Content Include="Pictures\ddd.jpg" />
+    <Content Include="Pictures\eee.jpg" />
+    <Content Include="Pictures\fff.png" />
+    <Content Include="Pictures\ggg.jpg" />
+    <Content Include="Pictures\hhh.jpg" />
     <Content Include="_Files\AMS-aug 5\spHistory_GetList.sql" />
     <Content Include="_Files\AMS-aug 5\spHistory_Insert.sql" />
     <Content Include="_Files\AMS-aug 5\[History].sql" />
