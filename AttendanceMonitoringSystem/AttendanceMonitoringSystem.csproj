@@ -33,6 +33,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -340,14 +341,7 @@
     <Content Include="bin\roslyn\vbc.exe.config" />
     <Content Include="bin\roslyn\vbc.rsp" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
-    <Content Include="Pictures\aaa.jpg" />
-    <Content Include="Pictures\bbb.jpg" />
-    <Content Include="Pictures\ccc.jpg" />
-    <Content Include="Pictures\ddd.jpg" />
-    <Content Include="Pictures\eee.jpg" />
-    <Content Include="Pictures\fff.png" />
-    <Content Include="Pictures\ggg.jpg" />
-    <Content Include="Pictures\hhh.jpg" />
+    <Content Include="Pictures\dbc.png" />
     <Content Include="_Files\AMS-aug 5\spHistory_GetList.sql" />
     <Content Include="_Files\AMS-aug 5\spHistory_Insert.sql" />
     <Content Include="_Files\AMS-aug 5\[History].sql" />
@@ -412,10 +406,10 @@
     <Compile Include="Main.aspx.designer.cs">
       <DependentUpon>Main.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Models\DailyRecordModel.cs" />
-    <Compile Include="Models\HistoryModel.cs" />
-    <Compile Include="Models\StudentModel.cs" />
-    <Compile Include="Models\Users.cs" />
+    <Compile Include="content\Models\DailyRecordModel.cs" />
+    <Compile Include="content\Models\HistoryModel.cs" />
+    <Compile Include="content\Models\StudentModel.cs" />
+    <Compile Include="content\Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registration.aspx.cs">
       <DependentUpon>Registration.aspx</DependentUpon>

@@ -18,12 +18,12 @@
         }
 
         .auto-style41 {
-            width: 1002px;
+            width: 100%;
             height: 29px;
         }
 
         .auto-style42 {
-            width: 379px;
+            width: 535px;
         }
 
         .auto-style45 {
@@ -44,16 +44,71 @@
             width: 172px;
         }
         .auto-style50 {
-            width: 1px;
+            width: 42px;
         }
-    </style>
+        .auto-style51 {
+            width: 97%;
+        height: 249px;
+            margin-right: 0px;
+        }
+        .auto-style52 {
+            width: 77px;
+        }
+        
+        .back{
+
+            background-image:url('Pictures/dbc.png');
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:cover;
+            overflow-x:hidden;
+            width:100%;
+            height:925px;
+
+        }
+        .auto-style59 {
+            width: 99%;
+        }
+        .auto-style60 {
+            background-image: url('Pictures/dbc.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            width: 100%;
+            height: 881px;
+            margin-right: 0px;
+        }
+        .auto-style66 {
+            width: 169px;
+        }
+        .auto-style69 {
+            width: 949px;
+            height: 282px;
+        }
+        .auto-style70 {
+            width: 112px;
+        }
+        .auto-style71 {
+            width: 98px;
+        }
+        .auto-style72 {
+            width: 88px;
+        }
+        .auto-style73 {
+            width: 150px;
+        }
+        .auto-style74 {
+            width: 158px;
+        }
+        </style>
 
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+    <div class="auto-style60">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
 
-    <table style="width: 100%">
+    <table class="auto-style59">
         <tr>
             <td>
                 <h2 class="auto-style41">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -62,12 +117,12 @@
         </tr>
     </table>
 
-    <table style="width: 100%" class="RegsForm">
+    <table class="auto-style59" style="width:100%">
         <tr>
             <td class="auto-style50"></td>
             <td class="auto-style42">
                 <asp:Button runat="server" ID="btnRegisterNew" Text="New" OnClick="btnRegisterNew_OnClick" Width="89px" Visible="false"/>
-                <asp:Panel ID="pnlStudentFields" runat="server">
+                <asp:Panel ID="pnlStudentFields" runat="server" Height="241px" Width="480px">
 
                     <table>
                         <tr>
@@ -130,10 +185,8 @@
 
 
                         </tr>
-                    </table>
 
-
-                    <tr>
+                                            <tr>
                         <td class="auto-style45">
                             <asp:Label ID="LblNote" runat="server" BorderStyle="None" />&nbsp;</td>
                         <td class="auto-style49"></td>
@@ -147,28 +200,25 @@
 
                         </td>
                     </tr>
-                </asp:Panel>
 
+                    </table>
+                </asp:Panel>
             </td>
         </tr>
-
     </table>
 
-    </td>
-
-            <td>
-                <table>
-                    <tr>
-                        <td>
-                            <asp:Panel runat="server" ID="pnlStudent" BorderStyle="solid" BorderWidth="3px">
-                                <table class="sortable jTPS" style="text-align: center; margin: 20px">
+    <table>
+        <tr>
+            <td class="auto-style69">
+                <asp:Panel runat="server" ID="pnlStudent" BorderStyle="solid" BorderWidth="3px" Height="275px" Width="921px" >
+                                <table class="auto-style51" style="text-align: center; margin-left: 20px; margin-top: 20px; margin-bottom: 20px;">
                                     <tr>
-                                        <th>ID</th>
-                                        <th>Student Number</th>
-                                        <th>Last Name</th>
-                                        <th>First Name</th>
-                                        <th>Middle Name</th>
-                                        <th>Program</th>
+                                        <th class="auto-style52">ID</th>
+                                        <th class="auto-style70">Student Number</th>
+                                        <th class="auto-style74">Last Name</th>
+                                        <th class="auto-style73">First Name</th>
+                                        <th class="auto-style71">Middle Name</th>
+                                        <th class="auto-style72">Program</th>
                                         <th>Year</th>
                                     </tr>
                                     <asp:Repeater runat="server" ID="rptrStudent" OnItemCommand="rptrStudent_OnItemCommand">
@@ -211,14 +261,8 @@
                                     </asp:Repeater>
                                 </table>
                             </asp:Panel>
-                        </td>
-                    </tr>
-                </table>
             </td>
-
-    </tr>
+        </tr>
     </table>
-
-
-
+   </div>
 </asp:Content>

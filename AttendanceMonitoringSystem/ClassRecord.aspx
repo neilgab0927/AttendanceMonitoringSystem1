@@ -2,57 +2,104 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style37 {
-            width: 132px;
-        }
-        .auto-style38 {
-            width: 167px;
-        }
-        .auto-style39 {
-            width: 177px;
-        }
-        .auto-style41 {
-            width: 196px;
-        }
-        .auto-style42 {
-            width: 189px;
-        }
-        .auto-style43 {
-            width: 187px;
-        }
         .auto-style44 {
             width: 155px;
-        }
-        .auto-style45 {
-            width: 100%;
-        }
-        .auto-style46 {
-            width: 61px;
         }
         .auto-style47 {
             margin-left: 0px;
         }
+
+        .back{
+
+            background-image:url('Pictures/dbc.png');
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:cover;
+            min-height:1000px;
+            min-width:1000px ;
+            width:100%;
+            height:100%;
+            margin:0 auto;
+
+        }
+        .auto-style48 {
+            width: 138px;
+        }
+        .auto-style49 {
+            width: 92%;
+        }
+        .auto-style50 {
+            width: 95%;
+            height: 131px;
+        }
+        .auto-style51 {
+            width: 65px;
+        }
+        .auto-style55 {
+            width: 252px;
+        }
+        .auto-style56 {
+            width: 252px;
+        }
+        .auto-style57 {
+            width: 252px;
+        }
+        .auto-style58 {
+            width: 193px;
+        }
+        .auto-style59 {
+            width: 252px;
+        }
+        .auto-style60 {
+           
+        }
+        .auto-style62 {
+            width: 100%;
+            margin-bottom: 0px;
+        }
+        .auto-style63 {
+            background-image: url('Pictures/dbc.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            min-height: 1000px;
+            min-width: 1000px;
+            width: 100%;
+            height: 709%;
+        }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:Panel runat="server" ID="pnlStudent" BorderStyle="solid" BorderWidth="3px">
-        <table style="text-align: center; margin: 20px; width:100%">
+    <div class="auto-style63">
+        <asp:Panel runat="server" ID="pnlStudent"  BorderWidth="0px" CssClass="auto-style60" Height="917px" Width="100%">
+
+            <table class="auto-style62">
+                <tr>
+                    <td>
+                       <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          Class Record</h2>
+                    </td>
+                </tr>
+            </table>
+
+        <table style="text-align: center; margin: 0px; " class="auto-style49">
             <tr>
                 
-                <td class="auto-style46">
+                <td class="auto-style48">
+                    &nbsp;&nbsp;
                     <asp:Button runat="server" ID="btnRegisterNew" Text="New Student" Width="115px" CssClass="auto-style47" OnClick="btnRegisterNew_Click" />
                 </td>
                 <td></td>
             </tr>
         </table>
-        <table style="text-align: center; margin: 20px; " class="auto-style45">
+        <table style="text-align: center; margin: 20px; " class="auto-style50">
             <tr>
-                <th class="auto-style37">ID</th>
-                <th class="auto-style38">Student Number</th>
-                <th class="auto-style39">Last Name</th>
-                <th class="auto-style41">First Name</th>
-                <th class="auto-style42">Middle Name</th>
-                <th class="auto-style43">Program</th>
+                <th class="auto-style51">ID</th>
+                <th class="auto-style58">Student Number</th>
+                <th class="auto-style57">Last Name</th>
+                <th class="auto-style55">First Name</th>
+                <th class="auto-style56">Middle Name</th>
+                <th class="auto-style59">Program</th>
                 <th class="auto-style44">Year</th>
             </tr>
             <asp:Repeater runat="server" ID="rptrStudent" OnItemCommand="rptrStudent_OnItemCommand">
@@ -94,4 +141,5 @@
             </asp:Repeater>
         </table>
     </asp:Panel>
+   </div>
 </asp:Content>

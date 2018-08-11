@@ -14,6 +14,8 @@ namespace AttendanceMonitoringSystem
 
         protected void Page_Load(object sender, EventArgs e)
         {
+           
+            btnRegisterNew.Visible = false;
             try
             {
                 if (!string.IsNullOrWhiteSpace(Session["userName"].ToString()))

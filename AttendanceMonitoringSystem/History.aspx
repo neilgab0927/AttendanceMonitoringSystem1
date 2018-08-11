@@ -18,25 +18,39 @@
         .auto-style38 {
             width: 1188px;
         }
+
+        .back{
+
+            background-image:url('Pictures/dbc.png');
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:cover;
+            width:100%;
+            height:925px;
+
+        }
     </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <table class="auto-style12">
-        <tr>
-            <td class="auto-style37">
-             <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HISTORY</h3>
-            </td>
-        </tr>
-
+    <div class="back">
+           <table class="back">
         <tr>
             <td>
                 <asp:Panel runat="server" ID="pnlHistory" BorderStyle="solid" BorderWidth="3px" >
+
+        <table>
+               <tr>
+            <td class="auto-style37">
+             <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HISTORY</h2>
+            </td>
+        </tr>
+        </table>
+
         <table class="auto-style38" style="text-align: center; margin: 20px">
             <tr>
-                <th>History</th>
+                <th>Event</th>
                 <th>Date and Time</th>
                 
             </tr>
@@ -59,6 +73,8 @@
             </td>
         </tr>
     </table>
+    </div>
+ 
 
 
     

@@ -5,37 +5,54 @@
 
         .back{
 
-            background-image:url('Pictures/aaa.jpg');
+            background-image:url('Pictures/dbc.png');
             background-repeat:no-repeat;
             background-attachment:fixed;
             background-size:cover;
             width:100%;
+            height:925px;
 
         }
         
- 
-        .auto-style37 {
-            background-image: url('Pictures/aaa.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            width: 100%;
-            height: 416px;
+        .auto-style38 {
+            width: 1219px;
+            height: 254px;
         }
+        .auto-style39 {
+            width: 852px;
+        }
+        .auto-style40 {
+            width: 68px;
+        }
+        .auto-style41 {
+            width: 159px;
+        }
+        .auto-style42 {
+            width: 295px;
+        }
+        .auto-style43 {
+            width: 132px;
+        }
+        .auto-style44 {
+            width: 160px;
+        }
+        
+ 
+     
         
  
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <div class="auto-style37">
-        <table style="width: 100%; /*background-image: url(Pictures/Background.png)*/">
+   <div class="back">
+        <table style="width: 100%;">
         <tr>
             <td>
                 <table class="auto-style19">
                     <tr>
                         <td class="auto-style11">
-                            <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DAILY RECORD</h4>
+                            <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DAILY RECORD</h2>
                         </td>
                     </tr>
                 </table>
@@ -49,11 +66,11 @@
             <td class="auto-style39">
                 &nbsp;&nbsp;&nbsp;<table class="auto-style38" style="text-align: center; margin-right: 20px; margin-top: 0px; margin-bottom: 0px; margin-left:20px;"designer:mapid="336">
                     <tr designer:mapid="337">
-                        <th _designer:mapid="338">ID</th>
-                        <th _designer:mapid="339">Student ID</th>
-                        <th _designer:mapid="33b">Name</th>
-                        <th _designer:mapid="33d">Program</th>
-                        <th _designer:mapid="33e">Year</th>
+                        <th _designer:mapid="338" class="auto-style40">ID</th>
+                        <th _designer:mapid="339" class="auto-style41">Student ID</th>
+                        <th _designer:mapid="33b" class="auto-style42">Name</th>
+                        <th _designer:mapid="33d" class="auto-style44">Program</th>
+                        <th _designer:mapid="33e" class="auto-style43">Year</th>
                         <th _designer:mapid="33e">Date</th>
                     </tr>
                     <asp:Repeater runat="server" ID="rptrDailyRecord">

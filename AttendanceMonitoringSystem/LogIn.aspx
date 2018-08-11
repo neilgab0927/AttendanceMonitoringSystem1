@@ -12,7 +12,9 @@
             background-repeat:no-repeat;
             background-attachment:fixed;
             background-size:cover;
+            margin:0 auto;
             width:100%;
+
             
         }
         
