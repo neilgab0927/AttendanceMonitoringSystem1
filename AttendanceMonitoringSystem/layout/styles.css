@@ -50,7 +50,7 @@ html[xmlns] .clearfix, html[xmlns] .section, html[xmlns] .fixed, html[xmlns] .ro
 	
 	
 	body, p, span, div 																{ font-family: Arial, Verdana, Serif;font-size:12px;line-height:18px;color:#9C9C9C; } 
-	p 																				{ margin-bottom:15px; }
+	p 																				{ margin-bottom:0px; }
 	
 	a 																				{ color:#329FCC; }
 	a:link 																			{  }
@@ -64,7 +64,7 @@ html[xmlns] .clearfix, html[xmlns] .section, html[xmlns] .fixed, html[xmlns] .ro
 	
 	body.texture 																	{ background:url("images/back-pattern.png"); }
 	
-	#header-wrapper 																{ height:120px;margin-bottom:20px;background:url('images/back-header-wrapper.png') repeat-x; }
+	#header-wrapper 																{ height:120px;margin-bottom:0px;background:url('images/back-header-wrapper.png') repeat-x; }
 	
 	#content 																		{ background:transparent; }
 	#sidebar 																		{ background:transparent;margin-bottom:25px; }
@@ -673,7 +673,7 @@ input[type="password"] {
 
 
 .TableHolder input[type="number"] {
-margin-right: 5px;
+margin-right: 0px;
 width: 80px;
 min-width: 80px;
 padding: 8px 6px;

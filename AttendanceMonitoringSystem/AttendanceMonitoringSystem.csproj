@@ -342,6 +342,7 @@
     <Content Include="bin\roslyn\vbc.rsp" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <Content Include="Pictures\dbc.png" />
+    <Content Include="Pictures\DBCRotonda.png" />
     <Content Include="_Files\AMS-aug 5\spHistory_GetList.sql" />
     <Content Include="_Files\AMS-aug 5\spHistory_Insert.sql" />
     <Content Include="_Files\AMS-aug 5\[History].sql" />
@@ -350,7 +351,6 @@
     <Content Include="packages\jQuery.1.9.1\Content\Scripts\jquery-1.9.1.min.js" />
     <None Include="packages\jQuery.1.9.1\Tools\jquery-1.9.1.intellisense.js" />
     <Content Include="Pictures\DBCLogo.png" />
-    <Content Include="Pictures\DBCRotonda.png" />
     <Content Include="Pictures\Log.png" />
     <Content Include="Registration.aspx" />
     <Content Include="Student.aspx" />
