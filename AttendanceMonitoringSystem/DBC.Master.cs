@@ -38,5 +38,9 @@ namespace AttendanceMonitoringSystem
         {
             Response.Redirect("ClassRecord.aspx");
         }
+         protected void lnkSignOut_OnClick (object sender, EventArgs e)
+        {
+            Response.Redirect("LogIn.aspx");
+        }
     }
 }

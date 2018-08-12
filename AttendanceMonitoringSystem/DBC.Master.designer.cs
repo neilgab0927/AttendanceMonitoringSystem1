@@ -31,6 +31,15 @@ namespace AttendanceMonitoringSystem {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// lblDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDate;
+        
+        /// <summary>
         /// lnkRegistration control.
         /// </summary>
         /// <remarks>
@@ -67,13 +76,13 @@ namespace AttendanceMonitoringSystem {
         protected global::System.Web.UI.WebControls.LinkButton lnkClassRecord;
         
         /// <summary>
-        /// lblDate control.
+        /// lnkSignOut control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDate;
+        protected global::System.Web.UI.WebControls.LinkButton lnkSignOut;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

@@ -82,20 +82,20 @@
             width: 949px;
             height: 282px;
         }
-        .auto-style70 {
-            width: 112px;
+        .auto-style77 {
+            width: 148px;
         }
-        .auto-style73 {
-            width: 150px;
+        .auto-style78 {
+            width: 183px;
         }
-        .auto-style74 {
-            width: 158px;
+        .auto-style80 {
+            width: 159px;
         }
-        .auto-style75 {
-            width: 126px;
+        .auto-style81 {
+            width: 190px;
         }
-        .auto-style76 {
-            width: 154px;
+        .auto-style83 {
+            width: 186px;
         }
         </style>
 
@@ -207,16 +207,16 @@
     <table>
         <tr>
             <td class="auto-style69">
-                <asp:Panel runat="server" ID="pnlStudent" BorderStyle="Solid"   Height="274px" Width="100%" >
+                <asp:Panel runat="server" ID="pnlStudent" BorderStyle="Solid"   Height="506px" Width="140%" >
                                 <table class="auto-style51" style="text-align: center; margin-left: 2px; margin-top: 20px; margin-bottom: 20px;">
                                     <tr>
                                         <th class="auto-style52">ID</th>
-                                        <th class="auto-style70">Student Number</th>
-                                        <th class="auto-style74">Last Name</th>
-                                        <th class="auto-style73">First Name</th>
-                                        <th class="auto-style76">Middle Name</th>
-                                        <th class="auto-style75">Program</th>
-                                        <th>Year</th>
+                                        <th class="auto-style77">Student Number</th>
+                                        <th class="auto-style81">Last Name</th>
+                                        <th class="auto-style81">First Name</th>
+                                        <th class="auto-style81">Middle Name</th>
+                                        <th class="auto-style78">Program</th>
+                                        <th class="auto-style80">Year</th>
                                     </tr>
                                     <asp:Repeater runat="server" ID="rptrStudent" OnItemCommand="rptrStudent_OnItemCommand">
                                         <ItemTemplate>
