@@ -18,8 +18,18 @@ namespace AttendanceMonitoringSystem
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            /// LblUser.Text = Session[""].ToString();
-            ///LblPass.Text = Session["P@ssword"].ToString();
+            try
+            {
+                if (!string.IsNullOrWhiteSpace(Session["userName"].ToString()))
+                {
+                    Response.Redirect("~/ClassRecord.aspx");
+                }
+            }
+            catch
+            {
+
+            }
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)

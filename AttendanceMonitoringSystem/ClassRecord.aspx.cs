@@ -19,8 +19,21 @@ namespace AttendanceMonitoringSystem
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(Session["userName"].ToString()))
+                {
+                    Response.Redirect("LogIn.aspx");
+                }
 
-            LoadStudentList(); // sa method na to, nirereset yung id
+                LoadStudentList(); // sa method na to, nirereset yung id
+            }
+            catch
+            {
+                Response.Redirect("LogIn.aspx");
+
+            }
+
 
         }
 

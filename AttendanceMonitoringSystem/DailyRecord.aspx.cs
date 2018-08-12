@@ -13,7 +13,18 @@ namespace AttendanceMonitoringSystem
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            LoadDailyRecord();
+            try
+            {
+                if (string.IsNullOrWhiteSpace(Session["userName"].ToString()))
+                    Response.Redirect("LogIn.aspx");
+
+                LoadDailyRecord();
+            }
+            catch
+            {
+                Response.Redirect("LogIn.aspx");
+            }
+
         }
 
         private void LoadDailyRecord()

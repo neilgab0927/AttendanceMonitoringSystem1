@@ -14,7 +14,8 @@ namespace AttendanceMonitoringSystem
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            LoadStudentList();
+            //LoadStudentList();
+            Response.Redirect("LogIn.aspx");
         }
 
         #region Events
