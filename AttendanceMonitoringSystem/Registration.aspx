@@ -83,20 +83,20 @@
             height: 282px;
         }
         .auto-style77 {
-            width: 148px;
-        }
-        .auto-style78 {
-            width: 183px;
-        }
-        .auto-style80 {
-            width: 159px;
-        }
-        .auto-style81 {
-            width: 190px;
-        }
-        .auto-style83 {
-            width: 186px;
-        }
+        width: 148px;
+    }
+    .auto-style78 {
+        width: 183px;
+    }
+    .auto-style80 {
+        width: 159px;
+    }
+    .auto-style81 {
+        width: 190px;
+    }
+    .auto-style83 {
+        width: 186px;
+    }
         </style>
 
 </asp:Content>
