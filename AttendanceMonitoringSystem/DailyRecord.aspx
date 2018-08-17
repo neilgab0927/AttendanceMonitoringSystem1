@@ -24,17 +24,30 @@
         .auto-style40 {
             width: 68px;
         }
-        .auto-style41 {
-            width: 159px;
+                
+ 
+ 
+        .auto-style45 {
+            width: 1210px;
+            height: 248px;
         }
-        .auto-style42 {
-            width: 295px;
+        .auto-style47 {
+            width: 186px;
         }
-        .auto-style43 {
-            width: 132px;
+        .auto-style49 {
+            width: 418px;
         }
-        .auto-style44 {
-            width: 160px;
+        .auto-style50 {
+            width: 449px;
+        }
+        .auto-style51 {
+            width: 406px;
+        }
+        .auto-style52 {
+            width: 544px;
+        }
+        .auto-style53 {
+            width: 486px;
         }
         
  
@@ -44,7 +57,7 @@
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <div class="back">
+    <div class="back">
         <table style="width: 100%;">
         <tr>
             <td>
@@ -63,15 +76,15 @@
     <table class="auto-style12">
 
         <tr>
-            <td class="auto-style39">
-                &nbsp;&nbsp;&nbsp;<table class="auto-style38" style="text-align: center; margin-right: 20px; margin-top: 0px; margin-bottom: 0px; margin-left:20px;"designer:mapid="336">
+            <td class="auto-style47">
+                &nbsp;&nbsp;&nbsp;<table class="auto-style45" style="text-align: center; margin-right: 20px; margin-top: 0px; margin-bottom: 0px; margin-left:20px;"designer:mapid="336">
                     <tr designer:mapid="337">
                         <th _designer:mapid="338" class="auto-style40">ID</th>
-                        <th _designer:mapid="339" class="auto-style41">Student ID</th>
-                        <th _designer:mapid="33b" class="auto-style42">Name</th>
-                        <th _designer:mapid="33d" class="auto-style44">Program</th>
-                        <th _designer:mapid="33e" class="auto-style43">Year</th>
-                        <th _designer:mapid="33e">Date</th>
+                        <th _designer:mapid="339" class="auto-style51">Student ID</th>
+                        <th _designer:mapid="33b" class="auto-style52">Name</th>
+                        <th _designer:mapid="33d" class="auto-style50">Program</th>
+                        <th _designer:mapid="33e" class="auto-style49">Year</th>
+                        <th _designer:mapid="33e" class="auto-style53">Date</th>
                     </tr>
                     <asp:Repeater runat="server" ID="rptrDailyRecord">
                         <ItemTemplate>
@@ -92,7 +105,7 @@
                                     <asp:Label ID="lblDailyRecordMiddleName" runat="server" Text='<%#Bind("Year") %>'></asp:Label>
                                 </td>
                                 <td>
-                                    <asp:Label ID="lblDailyRecordProgram" runat="server" Text='<%#Bind("Date","{0:MMMM dd, yyy hh:mm:ss tt}") %>'></asp:Label>
+                                    <asp:Label ID="lblDailyRecordProgram" runat="server" Text='<%#Bind("Date","{0:MMMM dd, yyyy hh:mm:ss tt}") %>'></asp:Label>
                                 </td>
                                
                                 <td>

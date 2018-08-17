@@ -1,13 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DBC.Master" AutoEventWireup="true" CodeBehind="History.aspx.cs" Inherits="AttendanceMonitoringSystem.History" %>
+﻿ <%@ Page Title="" Language="C#" MasterPageFile="~/DBC.Master" AutoEventWireup="true" CodeBehind="History.aspx.cs" Inherits="AttendanceMonitoringSystem.History" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         
-        .auto-style12 {
-            width: 100%;
-            height: 244px;
-        }
-
         .auto-style14 {
             width: 100%;
             height: 104px;
@@ -29,6 +24,10 @@
             height:925px;
 
         }
+        .auto-style41 {
+            width: 1006px;
+            height: 93px;
+        }
     </style>
 </asp:Content>
 
@@ -48,7 +47,7 @@
         </tr>
         </table>
 
-        <table class="auto-style38" style="text-align: center; margin: 20px">
+        <table class="auto-style41" style="text-align: center; margin: 20px">
             <tr>
                 <th>Event</th>
                 <th>Date and Time</th>
