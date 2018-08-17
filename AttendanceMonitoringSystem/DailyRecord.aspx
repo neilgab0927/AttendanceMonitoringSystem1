@@ -73,7 +73,7 @@
                         <th _designer:mapid="33e" class="auto-style43">Year</th>
                         <th _designer:mapid="33e">Date</th>
                     </tr>
-                    <asp:Repeater runat="server" ID="rptrDailyRecord">
+                    <asp:Repeater runat="server" ID="rptrDailyRecord" OnItemDataBound="rptrDailyRecord_OnItemDataBound">
                         <ItemTemplate>
                             <tr>
                                 <td>
@@ -91,8 +91,8 @@
                                 <td>
                                     <asp:Label ID="lblDailyRecordMiddleName" runat="server" Text='<%#Bind("Year") %>'></asp:Label>
                                 </td>
-                                <td>
-                                    <asp:Label ID="lblDailyRecordProgram" runat="server" Text='<%#Bind("Date","{0:MMMM dd, yyy hh:mm:ss tt}") %>'></asp:Label>
+                                <td id="tdDate" runat="server">
+                                    <asp:Label ID="lblDailyRecordProgram" runat="server" Text='<%#Bind("Date","{0:MMMM dd, yyyy hh:mm:ss tt}") %>'></asp:Label>
                                 </td>
                                
                                 <td>
