@@ -31,7 +31,7 @@ namespace AttendanceMonitoringSystem
             {
                 Response.Redirect("~/LogIn.aspx");
             }
-        }
+         }
 
         #region Events
 
