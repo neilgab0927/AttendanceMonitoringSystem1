@@ -44,6 +44,7 @@ namespace AttendanceMonitoringSystem
             {
                 if (!validateDateFormat(txtAdmissionYear0, lblAdmissionYearAddEdit0))
                 {
+                    Response.Write("<script>alert('Invalid date format');</script>");
                     lblAdmissionYearAddEdit0.ForeColor = System.Drawing.Color.Red;
                     return;
                 }
@@ -64,6 +65,8 @@ namespace AttendanceMonitoringSystem
             else
             {
                 isStudentFieldsEnabled(true);
+                Response.Write("<script>alert('Please enter required  fields ');</script>");
+
             }
         }
 

@@ -148,26 +148,24 @@
                 <tr>
                     <td style="background-color: yellow" class="auto-style28"></td>
 
-                    <td style="background-color: yellow" class="auto-style24">
-
-                            <asp:LinkButton runat="server" ID="lnkRegistration" Text="Registration" OnClick="lnkRegistration_OnClick" CssClass="header-section"/>
-
-                    </td>
-
                     <td style="background-color: yellow" class="auto-style40">
                         
                  <%--<asp:LinkButton runat="server" ID="lnkClassRecord" Text="Class Record" OnClick="lnkClassRecord_OnClick"/>--%>
-                         <asp:LinkButton runat="server" ID="lnkDailyRecord" Text="Daily Record" OnClick="lnkDailyRecord_OnClick" CssClass="header-section"/>
+                        <asp:LinkButton runat="server" ID="lnkDailyRecord" Text="Daily Record" OnClick="lnkDailyRecord_OnClick" CssClass="header-section"/>
+                        <asp:LinkButton runat="server" ID="lnkRegistration" Text="Registration" OnClick="lnkRegistration_OnClick" visible="False" CssClass="header-section"/>
+
                     </td>
 
                     <td style="background-color: yellow" class="auto-style34">
                        
-                         <asp:LinkButton runat="server" ID="lnkHistory" Text="History" OnClick="lnkHistory_OnClick" CssClass="header-section"/>
+                        <asp:LinkButton runat="server" ID="lnkHistory" Text="History" OnClick="lnkHistory_OnClick" CssClass="header-section"/>
                        
                     </td>
+
                     <td style="background-color: yellow" class="auto-style22">
-                         <asp:LinkButton runat="server" ID="lnkClassRecord" Text="Class Record" OnClick="lnkClassRecord_OnClick" CssClass="header-section"/>
+                        <asp:LinkButton runat="server" ID="lnkClassRecord" Text="Class Record" OnClick="lnkClassRecord_OnClick" CssClass="header-section"/>
                     </td>
+
                     <td style="background-color: yellow" class="auto-style39">
                          &nbsp;</td>
                     <td style="background-color: yellow" class="auto-style15">

@@ -104,7 +104,7 @@
                                 <td>
                                     <asp:Label ID="lblDailyRecordMiddleName" runat="server" Text='<%#Bind("Year") %>'></asp:Label>
                                 </td>
-                                    <asp:Label ID="lblDailyRecordProgram" runat="server" Text='<%#Bind("Date","{0:MMMM dd, yyyy hh:mm:ss tt}") %>'></asp:Label>
+                                <td> <asp:Label ID="lblDailyRecordProgram" runat="server" Text='<%#Bind("Date","{0:MMMM dd, yyyy hh:mm:ss tt}") %>'></asp:Label>
                                 </td>
 
                                 <td>
